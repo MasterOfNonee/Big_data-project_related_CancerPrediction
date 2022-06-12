@@ -1,0 +1,923 @@
+*** Reading local file: /home/harsh/airflow/logs/Airflow_cancer/Spark_queryy/2022-01-30T12:58:42.731249+00:00/1.log
+[2022-01-30, 23:59:18 ] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: Airflow_cancer.Spark_queryy manual__2022-01-30T12:58:42.731249+00:00 [queued]>
+[2022-01-30, 23:59:18 ] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: Airflow_cancer.Spark_queryy manual__2022-01-30T12:58:42.731249+00:00 [queued]>
+[2022-01-30, 23:59:18 ] {taskinstance.py:1238} INFO - 
+--------------------------------------------------------------------------------
+[2022-01-30, 23:59:18 ] {taskinstance.py:1239} INFO - Starting attempt 1 of 1
+[2022-01-30, 23:59:18 ] {taskinstance.py:1240} INFO - 
+--------------------------------------------------------------------------------
+[2022-01-30, 23:59:18 ] {taskinstance.py:1259} INFO - Executing <Task(BashOperator): Spark_queryy> on 2022-01-30 12:58:42.731249+00:00
+[2022-01-30, 23:59:18 ] {standard_task_runner.py:52} INFO - Started process 86065 to run task
+[2022-01-30, 23:59:18 ] {standard_task_runner.py:76} INFO - Running: ['airflow', 'tasks', 'run', 'Airflow_cancer', 'Spark_queryy', 'manual__2022-01-30T12:58:42.731249+00:00', '--job-id', '147', '--raw', '--subdir', 'DAGS_FOLDER/airflow.py', '--cfg-path', '/tmp/tmpbcy9vztt', '--error-file', '/tmp/tmpblwwvfq3']
+[2022-01-30, 23:59:18 ] {standard_task_runner.py:77} INFO - Job 147: Subtask Spark_queryy
+[2022-01-30, 23:59:18 ] {logging_mixin.py:109} INFO - Running <TaskInstance: Airflow_cancer.Spark_queryy manual__2022-01-30T12:58:42.731249+00:00 [running]> on host harsh-virtual-machine
+[2022-01-30, 23:59:18 ] {taskinstance.py:1424} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=HARSH
+AIRFLOW_CTX_DAG_ID=Airflow_cancer
+AIRFLOW_CTX_TASK_ID=Spark_queryy
+AIRFLOW_CTX_EXECUTION_DATE=2022-01-30T12:58:42.731249+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-01-30T12:58:42.731249+00:00
+[2022-01-30, 23:59:18 ] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2022-01-30, 23:59:18 ] {subprocess.py:74} INFO - Running command: ['bash', '-c', 'spark-submit --master yarn Spark_hive.py']
+[2022-01-30, 23:59:18 ] {subprocess.py:85} INFO - Output:
+[2022-01-30, 23:59:19 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:19  WARN util.Utils: Your hostname, harsh-virtual-machine resolves to a loopback address: 127.0.1.1; using 192.168.206.185 instead (on interface ens33)
+[2022-01-30, 23:59:19 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:19  WARN util.Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+[2022-01-30, 23:59:19 ] {subprocess.py:89} INFO - WARNING: An illegal reflective access operation has occurred
+[2022-01-30, 23:59:19 ] {subprocess.py:89} INFO - WARNING: Illegal reflective access by org.apache.spark.unsafe.Platform (file:/home/harsh/DBDA_HOME/spark-3.2.0-bin-hadoop3.2/jars/spark-unsafe_2.12-3.2.0.jar) to constructor java.nio.DirectByteBuffer(long,int)
+[2022-01-30, 23:59:19 ] {subprocess.py:89} INFO - WARNING: Please consider reporting this to the maintainers of org.apache.spark.unsafe.Platform
+[2022-01-30, 23:59:19 ] {subprocess.py:89} INFO - WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+[2022-01-30, 23:59:19 ] {subprocess.py:89} INFO - WARNING: All illegal access operations will be denied in a future release
+[2022-01-30, 23:59:19 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:19  INFO spark.SparkContext: Running Spark version 3.2.0
+[2022-01-30, 23:59:19 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:19  WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[2022-01-30, 23:59:19 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:19  INFO resource.ResourceUtils: ==============================================================
+[2022-01-30, 23:59:19 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:19  INFO resource.ResourceUtils: No custom resources configured for spark.driver.
+[2022-01-30, 23:59:19 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:19  INFO resource.ResourceUtils: ==============================================================
+[2022-01-30, 23:59:19 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:19  INFO spark.SparkContext: Submitted application: Python Spark SQL Hive integration example
+[2022-01-30, 23:59:19 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:19  INFO resource.ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+[2022-01-30, 23:59:19 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:19  INFO resource.ResourceProfile: Limiting resource is cpus at 1 tasks per executor
+[2022-01-30, 23:59:19 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:19  INFO resource.ResourceProfileManager: Added ResourceProfile id: 0
+[2022-01-30, 23:59:19 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:19  INFO spark.SecurityManager: Changing view acls to: harsh
+[2022-01-30, 23:59:19 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:19  INFO spark.SecurityManager: Changing modify acls to: harsh
+[2022-01-30, 23:59:19 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:19  INFO spark.SecurityManager: Changing view acls groups to:
+[2022-01-30, 23:59:19 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:19  INFO spark.SecurityManager: Changing modify acls groups to:
+[2022-01-30, 23:59:19 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:19  INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(harsh); groups with view permissions: Set(); users  with modify permissions: Set(harsh); groups with modify permissions: Set()
+[2022-01-30, 23:59:20 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:20  INFO util.Utils: Successfully started service 'sparkDriver' on port 45547.
+[2022-01-30, 23:59:20 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:20  INFO spark.SparkEnv: Registering MapOutputTracker
+[2022-01-30, 23:59:20 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:20  INFO spark.SparkEnv: Registering BlockManagerMaster
+[2022-01-30, 23:59:20 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:20  INFO storage.BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+[2022-01-30, 23:59:20 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:20  INFO storage.BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+[2022-01-30, 23:59:20 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:20  INFO spark.SparkEnv: Registering BlockManagerMasterHeartbeat
+[2022-01-30, 23:59:20 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:20  INFO storage.DiskBlockManager: Created local directory at /tmp/blockmgr-78d6c588-5921-4a44-becd-3c3111cdb82d
+[2022-01-30, 23:59:20 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:20  INFO memory.MemoryStore: MemoryStore started with capacity 434.4 MiB
+[2022-01-30, 23:59:20 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:20  INFO spark.SparkEnv: Registering OutputCommitCoordinator
+[2022-01-30, 23:59:20 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:20  INFO util.log: Logging initialized @1714ms to org.sparkproject.jetty.util.log.Slf4jLog
+[2022-01-30, 23:59:20 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:20  INFO server.Server: jetty-9.4.43.v20210629; built: 2021-06-30T11:07:22.254Z; git: 526006ecfa3af7f1a27ef3a288e2bef7ea9dd7e8; jvm 11.0.13+8-Ubuntu-0ubuntu1.18.04
+[2022-01-30, 23:59:20 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:20  INFO server.Server: Started @1773ms
+[2022-01-30, 23:59:20 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:20  INFO server.AbstractConnector: Started ServerConnector@68a05ed2{HTTP/1.1, (http/1.1)}{0.0.0.0:4040}
+[2022-01-30, 23:59:20 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:20  INFO util.Utils: Successfully started service 'SparkUI' on port 4040.
+[2022-01-30, 23:59:20 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:20  INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@68ec987b{/jobs,null,AVAILABLE,@Spark}
+[2022-01-30, 23:59:20 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:20  INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@6843546{/jobs/json,null,AVAILABLE,@Spark}
+[2022-01-30, 23:59:20 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:20  INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@15d637e6{/jobs/job,null,AVAILABLE,@Spark}
+[2022-01-30, 23:59:20 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:20  INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@2ab75ab4{/jobs/job/json,null,AVAILABLE,@Spark}
+[2022-01-30, 23:59:20 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:20  INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@368e068c{/stages,null,AVAILABLE,@Spark}
+[2022-01-30, 23:59:20 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:20  INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@690b31df{/stages/json,null,AVAILABLE,@Spark}
+[2022-01-30, 23:59:20 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:20  INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@5c7fd5cc{/stages/stage,null,AVAILABLE,@Spark}
+[2022-01-30, 23:59:20 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:20  INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@62b4ddfb{/stages/stage/json,null,AVAILABLE,@Spark}
+[2022-01-30, 23:59:20 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:20  INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@5b871bba{/stages/pool,null,AVAILABLE,@Spark}
+[2022-01-30, 23:59:20 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:20  INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@2c9ff551{/stages/pool/json,null,AVAILABLE,@Spark}
+[2022-01-30, 23:59:20 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:20  INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@2631fd7e{/storage,null,AVAILABLE,@Spark}
+[2022-01-30, 23:59:20 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:20  INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@180f5388{/storage/json,null,AVAILABLE,@Spark}
+[2022-01-30, 23:59:20 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:20  INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@37d73d14{/storage/rdd,null,AVAILABLE,@Spark}
+[2022-01-30, 23:59:20 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:20  INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@56da1863{/storage/rdd/json,null,AVAILABLE,@Spark}
+[2022-01-30, 23:59:20 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:20  INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@61bba502{/environment,null,AVAILABLE,@Spark}
+[2022-01-30, 23:59:20 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:20  INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@f941f7c{/environment/json,null,AVAILABLE,@Spark}
+[2022-01-30, 23:59:20 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:20  INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@cddbd07{/executors,null,AVAILABLE,@Spark}
+[2022-01-30, 23:59:20 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:20  INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@72fee261{/executors/json,null,AVAILABLE,@Spark}
+[2022-01-30, 23:59:20 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:20  INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@3711b437{/executors/threadDump,null,AVAILABLE,@Spark}
+[2022-01-30, 23:59:20 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:20  INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@1c2383f3{/executors/threadDump/json,null,AVAILABLE,@Spark}
+[2022-01-30, 23:59:20 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:20  INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@5861e09a{/static,null,AVAILABLE,@Spark}
+[2022-01-30, 23:59:20 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:20  INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@2c9c1a78{/,null,AVAILABLE,@Spark}
+[2022-01-30, 23:59:20 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:20  INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@6f39d35{/api,null,AVAILABLE,@Spark}
+[2022-01-30, 23:59:20 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:20  INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@3af780b{/jobs/job/kill,null,AVAILABLE,@Spark}
+[2022-01-30, 23:59:20 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:20  INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@71edce37{/stages/stage/kill,null,AVAILABLE,@Spark}
+[2022-01-30, 23:59:20 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:20  INFO ui.SparkUI: Bound SparkUI to 0.0.0.0, and started at http://192.168.206.185:4040
+[2022-01-30, 23:59:20 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:20  INFO client.DefaultNoHARMFailoverProxyProvider: Connecting to ResourceManager at /0.0.0.0:8032
+[2022-01-30, 23:59:20 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:20  INFO yarn.Client: Requesting a new application from cluster with 1 NodeManagers
+[2022-01-30, 23:59:21 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:21  INFO conf.Configuration: resource-types.xml not found
+[2022-01-30, 23:59:21 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:21  INFO resource.ResourceUtils: Unable to find 'resource-types.xml'.
+[2022-01-30, 23:59:21 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:21  INFO yarn.Client: Verifying our application has not requested more than the maximum memory capability of the cluster (8192 MB per container)
+[2022-01-30, 23:59:21 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:21  INFO yarn.Client: Will allocate AM container, with 896 MB memory including 384 MB overhead
+[2022-01-30, 23:59:21 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:21  INFO yarn.Client: Setting up container launch context for our AM
+[2022-01-30, 23:59:21 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:21  INFO yarn.Client: Setting up the launch environment for our AM container
+[2022-01-30, 23:59:21 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:21  INFO yarn.Client: Preparing resources for our AM container
+[2022-01-30, 23:59:21 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:21  WARN yarn.Client: Neither spark.yarn.jars nor spark.yarn.archive is set, falling back to uploading libraries under SPARK_HOME.
+[2022-01-30, 23:59:22 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:22  INFO yarn.Client: Uploading resource file:/tmp/spark-0bf1a34a-d524-4059-a8cb-1739a52c3eee/__spark_libs__2669894920556761063.zip -> hdfs://localhost:9000/user/harsh/.sparkStaging/application_1643495154301_0022/__spark_libs__2669894920556761063.zip
+[2022-01-30, 23:59:23 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:23  INFO yarn.Client: Uploading resource file:/home/harsh/DBDA_HOME/spark-3.2.0-bin-hadoop3.2/python/lib/pyspark.zip -> hdfs://localhost:9000/user/harsh/.sparkStaging/application_1643495154301_0022/pyspark.zip
+[2022-01-30, 23:59:23 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:23  INFO yarn.Client: Uploading resource file:/home/harsh/DBDA_HOME/spark-3.2.0-bin-hadoop3.2/python/lib/py4j-0.10.9.2-src.zip -> hdfs://localhost:9000/user/harsh/.sparkStaging/application_1643495154301_0022/py4j-0.10.9.2-src.zip
+[2022-01-30, 23:59:23 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:23  INFO yarn.Client: Uploading resource file:/tmp/spark-0bf1a34a-d524-4059-a8cb-1739a52c3eee/__spark_conf__2231785169601534506.zip -> hdfs://localhost:9000/user/harsh/.sparkStaging/application_1643495154301_0022/__spark_conf__.zip
+[2022-01-30, 23:59:23 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:23  INFO spark.SecurityManager: Changing view acls to: harsh
+[2022-01-30, 23:59:23 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:23  INFO spark.SecurityManager: Changing modify acls to: harsh
+[2022-01-30, 23:59:23 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:23  INFO spark.SecurityManager: Changing view acls groups to:
+[2022-01-30, 23:59:23 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:23  INFO spark.SecurityManager: Changing modify acls groups to:
+[2022-01-30, 23:59:23 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:23  INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(harsh); groups with view permissions: Set(); users  with modify permissions: Set(harsh); groups with modify permissions: Set()
+[2022-01-30, 23:59:23 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:23  INFO yarn.Client: Submitting application application_1643495154301_0022 to ResourceManager
+[2022-01-30, 23:59:23 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:23  INFO impl.YarnClientImpl: Submitted application application_1643495154301_0022
+[2022-01-30, 23:59:24 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:24  INFO yarn.Client: Application report for application_1643495154301_0022 (state: ACCEPTED)
+[2022-01-30, 23:59:24 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:24  INFO yarn.Client:
+[2022-01-30, 23:59:24 ] {subprocess.py:89} INFO - 	 client token: N/A
+[2022-01-30, 23:59:24 ] {subprocess.py:89} INFO - 	 diagnostics: AM container is launched, waiting for AM container to Register with RM
+[2022-01-30, 23:59:24 ] {subprocess.py:89} INFO - 	 ApplicationMaster host: N/A
+[2022-01-30, 23:59:24 ] {subprocess.py:89} INFO - 	 ApplicationMaster RPC port: -1
+[2022-01-30, 23:59:24 ] {subprocess.py:89} INFO - 	 queue: default
+[2022-01-30, 23:59:24 ] {subprocess.py:89} INFO - 	 start time: 1643547563349
+[2022-01-30, 23:59:24 ] {subprocess.py:89} INFO - 	 final status: UNDEFINED
+[2022-01-30, 23:59:24 ] {subprocess.py:89} INFO - 	 tracking URL: http://harsh-virtual-machine:8088/proxy/application_1643495154301_0022/
+[2022-01-30, 23:59:24 ] {subprocess.py:89} INFO - 	 user: harsh
+[2022-01-30, 23:59:25 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:25  INFO yarn.Client: Application report for application_1643495154301_0022 (state: ACCEPTED)
+[2022-01-30, 23:59:26 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:26  INFO yarn.Client: Application report for application_1643495154301_0022 (state: ACCEPTED)
+[2022-01-30, 23:59:26 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:26  INFO cluster.YarnClientSchedulerBackend: Add WebUI Filter. org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter, Map(PROXY_HOSTS -> harsh-virtual-machine, PROXY_URI_BASES -> http://harsh-virtual-machine:8088/proxy/application_1643495154301_0022), /proxy/application_1643495154301_0022
+[2022-01-30, 23:59:27 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:27  INFO yarn.Client: Application report for application_1643495154301_0022 (state: RUNNING)
+[2022-01-30, 23:59:27 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:27  INFO yarn.Client:
+[2022-01-30, 23:59:27 ] {subprocess.py:89} INFO - 	 client token: N/A
+[2022-01-30, 23:59:27 ] {subprocess.py:89} INFO - 	 diagnostics: N/A
+[2022-01-30, 23:59:27 ] {subprocess.py:89} INFO - 	 ApplicationMaster host: 192.168.206.185
+[2022-01-30, 23:59:27 ] {subprocess.py:89} INFO - 	 ApplicationMaster RPC port: -1
+[2022-01-30, 23:59:27 ] {subprocess.py:89} INFO - 	 queue: default
+[2022-01-30, 23:59:27 ] {subprocess.py:89} INFO - 	 start time: 1643547563349
+[2022-01-30, 23:59:27 ] {subprocess.py:89} INFO - 	 final status: UNDEFINED
+[2022-01-30, 23:59:27 ] {subprocess.py:89} INFO - 	 tracking URL: http://harsh-virtual-machine:8088/proxy/application_1643495154301_0022/
+[2022-01-30, 23:59:27 ] {subprocess.py:89} INFO - 	 user: harsh
+[2022-01-30, 23:59:27 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:27  INFO cluster.YarnClientSchedulerBackend: Application application_1643495154301_0022 has started running.
+[2022-01-30, 23:59:27 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:27  INFO util.Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 38279.
+[2022-01-30, 23:59:27 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:27  INFO netty.NettyBlockTransferService: Server created on 192.168.206.185:38279
+[2022-01-30, 23:59:27 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:27  INFO cluster.YarnSchedulerBackend$YarnSchedulerEndpoint: ApplicationMaster registered as NettyRpcEndpointRef(spark-client://YarnAM)
+[2022-01-30, 23:59:27 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:27  INFO storage.BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+[2022-01-30, 23:59:27 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:27  INFO storage.BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 192.168.206.185, 38279, None)
+[2022-01-30, 23:59:27 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:27  INFO storage.BlockManagerMasterEndpoint: Registering block manager 192.168.206.185:38279 with 434.4 MiB RAM, BlockManagerId(driver, 192.168.206.185, 38279, None)
+[2022-01-30, 23:59:27 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:27  INFO storage.BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 192.168.206.185, 38279, None)
+[2022-01-30, 23:59:27 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:27  INFO storage.BlockManager: Initialized BlockManager: BlockManagerId(driver, 192.168.206.185, 38279, None)
+[2022-01-30, 23:59:27 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:27  INFO ui.ServerInfo: Adding filter to /metrics/json: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+[2022-01-30, 23:59:27 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:27  INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@5c1f4dc9{/metrics/json,null,AVAILABLE,@Spark}
+[2022-01-30, 23:59:31 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:31  INFO cluster.YarnSchedulerBackend$YarnDriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (192.168.206.185:51506) with ID 1,  ResourceProfileId 0
+[2022-01-30, 23:59:31 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:31  INFO storage.BlockManagerMasterEndpoint: Registering block manager harsh-virtual-machine:35681 with 434.4 MiB RAM, BlockManagerId(1, harsh-virtual-machine, 35681, None)
+[2022-01-30, 23:59:33 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:33  INFO cluster.YarnSchedulerBackend$YarnDriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (192.168.206.185:51512) with ID 2,  ResourceProfileId 0
+[2022-01-30, 23:59:33 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:33  INFO cluster.YarnClientSchedulerBackend: SchedulerBackend is ready for scheduling beginning after reached minRegisteredResourcesRatio: 0.8
+[2022-01-30, 23:59:33 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:33  INFO internal.SharedState: Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir.
+[2022-01-30, 23:59:33 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:33  INFO internal.SharedState: Warehouse path is 'hdfs://localhost:9000/user/hive/warehouse'.
+[2022-01-30, 23:59:33 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:33  INFO ui.ServerInfo: Adding filter to /SQL: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+[2022-01-30, 23:59:33 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:33  INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@ea0eeeb{/SQL,null,AVAILABLE,@Spark}
+[2022-01-30, 23:59:33 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:33  INFO ui.ServerInfo: Adding filter to /SQL/json: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+[2022-01-30, 23:59:33 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:33  INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@2d092ea8{/SQL/json,null,AVAILABLE,@Spark}
+[2022-01-30, 23:59:33 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:33  INFO ui.ServerInfo: Adding filter to /SQL/execution: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+[2022-01-30, 23:59:33 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:33  INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@52970777{/SQL/execution,null,AVAILABLE,@Spark}
+[2022-01-30, 23:59:33 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:33  INFO ui.ServerInfo: Adding filter to /SQL/execution/json: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+[2022-01-30, 23:59:33 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:33  INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@50331ed{/SQL/execution/json,null,AVAILABLE,@Spark}
+[2022-01-30, 23:59:33 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:33  INFO ui.ServerInfo: Adding filter to /static/sql: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+[2022-01-30, 23:59:33 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:33  INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@1d7a8c79{/static/sql,null,AVAILABLE,@Spark}
+[2022-01-30, 23:59:33 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:33  INFO storage.BlockManagerMasterEndpoint: Registering block manager harsh-virtual-machine:38469 with 434.4 MiB RAM, BlockManagerId(2, harsh-virtual-machine, 38469, None)
+[2022-01-30, 23:59:34 ] {subprocess.py:89} INFO - ===============
+[2022-01-30, 23:59:34 ] {subprocess.py:89} INFO - AppName: Python Spark SQL Hive integration example
+[2022-01-30, 23:59:34 ] {subprocess.py:89} INFO - Master: yarn
+[2022-01-30, 23:59:34 ] {subprocess.py:89} INFO - ===============
+[2022-01-30, 23:59:35 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:35  INFO conf.HiveConf: Found configuration file null
+[2022-01-30, 23:59:35 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:35  INFO hive.HiveUtils: Initializing HiveMetastoreConnection version 2.3.9 using Spark classes.
+[2022-01-30, 23:59:35 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:35  INFO client.HiveClientImpl: Warehouse location for Hive client (version 2.3.9) is hdfs://localhost:9000/user/hive/warehouse
+[2022-01-30, 23:59:35 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:35  WARN conf.HiveConf: HiveConf of name hive.stats.jdbc.timeout does not exist
+[2022-01-30, 23:59:35 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:35  WARN conf.HiveConf: HiveConf of name hive.stats.retries.wait does not exist
+[2022-01-30, 23:59:35 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:35  INFO metastore.HiveMetaStore: 0: Opening raw store with implementation class:org.apache.hadoop.hive.metastore.ObjectStore
+[2022-01-30, 23:59:35 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:35  INFO metastore.ObjectStore: ObjectStore, initialize called
+[2022-01-30, 23:59:35 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:35  INFO DataNucleus.Persistence: Property hive.metastore.integral.jdo.pushdown unknown - will be ignored
+[2022-01-30, 23:59:35 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:35  INFO DataNucleus.Persistence: Property datanucleus.cache.level2 unknown - will be ignored
+[2022-01-30, 23:59:36 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:36  INFO metastore.ObjectStore: Setting MetaStore object pin classes with hive.metastore.cache.pinobjtypes="Table,StorageDescriptor,SerDeInfo,Partition,Database,Type,FieldSchema,Order"
+[2022-01-30, 23:59:37 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:37  INFO metastore.MetaStoreDirectSql: Using direct SQL, underlying DB is DERBY
+[2022-01-30, 23:59:37 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:37  INFO metastore.ObjectStore: Initialized ObjectStore
+[2022-01-30, 23:59:37 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:37  WARN metastore.ObjectStore: Version information not found in metastore. hive.metastore.schema.verification is not enabled so recording the schema version 2.3.0
+[2022-01-30, 23:59:37 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:37  WARN metastore.ObjectStore: setMetaStoreSchemaVersion called but recording version is disabled: version = 2.3.0, comment = Set by MetaStore harsh@127.0.1.1
+[2022-01-30, 23:59:37 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:37  INFO metastore.HiveMetaStore: Added admin role in metastore
+[2022-01-30, 23:59:37 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:37  INFO metastore.HiveMetaStore: Added public role in metastore
+[2022-01-30, 23:59:37 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:37  INFO metastore.HiveMetaStore: No user is added in admin role, since config is empty
+[2022-01-30, 23:59:37 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:37  INFO metastore.HiveMetaStore: 0: get_database: default
+[2022-01-30, 23:59:37 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:37  INFO HiveMetaStore.audit: ugi=harsh	ip=unknown-ip-addr	cmd=get_database: default
+[2022-01-30, 23:59:37 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:37  INFO metastore.HiveMetaStore: 0: get_database: global_temp
+[2022-01-30, 23:59:37 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:37  INFO HiveMetaStore.audit: ugi=harsh	ip=unknown-ip-addr	cmd=get_database: global_temp
+[2022-01-30, 23:59:37 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:37  WARN metastore.ObjectStore: Failed to get database global_temp, returning NoSuchObjectException
+[2022-01-30, 23:59:37 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:37  INFO metastore.HiveMetaStore: 0: create_database: Database(name:mini_project1, description:, locationUri:hdfs://localhost:9000/user/hive/warehouse/mini_project1.db, parameters:{}, ownerName:harsh)
+[2022-01-30, 23:59:37 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:37  INFO HiveMetaStore.audit: ugi=harsh	ip=unknown-ip-addr	cmd=create_database: Database(name:mini_project1, description:, locationUri:hdfs://localhost:9000/user/hive/warehouse/mini_project1.db, parameters:{}, ownerName:harsh)
+[2022-01-30, 23:59:37 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:37  ERROR metastore.RetryingHMSHandler: AlreadyExistsException(message:Database mini_project1 already exists)
+[2022-01-30, 23:59:37 ] {subprocess.py:89} INFO - 	at org.apache.hadoop.hive.metastore.HiveMetaStore$HMSHandler.create_database(HiveMetaStore.java:925)
+[2022-01-30, 23:59:37 ] {subprocess.py:89} INFO - 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+[2022-01-30, 23:59:37 ] {subprocess.py:89} INFO - 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+[2022-01-30, 23:59:37 ] {subprocess.py:89} INFO - 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+[2022-01-30, 23:59:37 ] {subprocess.py:89} INFO - 	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+[2022-01-30, 23:59:37 ] {subprocess.py:89} INFO - 	at org.apache.hadoop.hive.metastore.RetryingHMSHandler.invokeInternal(RetryingHMSHandler.java:148)
+[2022-01-30, 23:59:37 ] {subprocess.py:89} INFO - 	at org.apache.hadoop.hive.metastore.RetryingHMSHandler.invoke(RetryingHMSHandler.java:107)
+[2022-01-30, 23:59:37 ] {subprocess.py:89} INFO - 	at com.sun.proxy.$Proxy29.create_database(Unknown Source)
+[2022-01-30, 23:59:37 ] {subprocess.py:89} INFO - 	at org.apache.hadoop.hive.metastore.HiveMetaStoreClient.createDatabase(HiveMetaStoreClient.java:725)
+[2022-01-30, 23:59:37 ] {subprocess.py:89} INFO - 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+[2022-01-30, 23:59:37 ] {subprocess.py:89} INFO - 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+[2022-01-30, 23:59:37 ] {subprocess.py:89} INFO - 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+[2022-01-30, 23:59:37 ] {subprocess.py:89} INFO - 	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+[2022-01-30, 23:59:37 ] {subprocess.py:89} INFO - 	at org.apache.hadoop.hive.metastore.RetryingMetaStoreClient.invoke(RetryingMetaStoreClient.java:173)
+[2022-01-30, 23:59:37 ] {subprocess.py:89} INFO - 	at com.sun.proxy.$Proxy30.createDatabase(Unknown Source)
+[2022-01-30, 23:59:37 ] {subprocess.py:89} INFO - 	at org.apache.hadoop.hive.ql.metadata.Hive.createDatabase(Hive.java:434)
+[2022-01-30, 23:59:37 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.hive.client.HiveClientImpl.$anonfun$createDatabase$1(HiveClientImpl.scala:345)
+[2022-01-30, 23:59:37 ] {subprocess.py:89} INFO - 	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+[2022-01-30, 23:59:37 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.hive.client.HiveClientImpl.$anonfun$withHiveState$1(HiveClientImpl.scala:303)
+[2022-01-30, 23:59:37 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.hive.client.HiveClientImpl.liftedTree1$1(HiveClientImpl.scala:234)
+[2022-01-30, 23:59:37 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.hive.client.HiveClientImpl.retryLocked(HiveClientImpl.scala:233)
+[2022-01-30, 23:59:37 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.hive.client.HiveClientImpl.withHiveState(HiveClientImpl.scala:283)
+[2022-01-30, 23:59:37 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.hive.client.HiveClientImpl.createDatabase(HiveClientImpl.scala:343)
+[2022-01-30, 23:59:37 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.hive.HiveExternalCatalog.$anonfun$createDatabase$1(HiveExternalCatalog.scala:193)
+[2022-01-30, 23:59:37 ] {subprocess.py:89} INFO - 	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+[2022-01-30, 23:59:37 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.hive.HiveExternalCatalog.withClient(HiveExternalCatalog.scala:102)
+[2022-01-30, 23:59:37 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.hive.HiveExternalCatalog.createDatabase(HiveExternalCatalog.scala:193)
+[2022-01-30, 23:59:37 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.catalyst.catalog.ExternalCatalogWithListener.createDatabase(ExternalCatalogWithListener.scala:47)
+[2022-01-30, 23:59:37 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.catalyst.catalog.SessionCatalog.createDatabase(SessionCatalog.scala:251)
+[2022-01-30, 23:59:37 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.execution.command.CreateDatabaseCommand.run(ddl.scala:83)
+[2022-01-30, 23:59:37 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.execution.command.ExecutedCommandExec.sideEffectResult$lzycompute(commands.scala:75)
+[2022-01-30, 23:59:37 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.execution.command.ExecutedCommandExec.sideEffectResult(commands.scala:73)
+[2022-01-30, 23:59:37 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.execution.command.ExecutedCommandExec.executeCollect(commands.scala:84)
+[2022-01-30, 23:59:37 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.execution.QueryExecution$$anonfun$eagerlyExecuteCommands$1.$anonfun$applyOrElse$1(QueryExecution.scala:110)
+[2022-01-30, 23:59:37 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$5(SQLExecution.scala:103)
+[2022-01-30, 23:59:37 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.execution.SQLExecution$.withSQLConfPropagated(SQLExecution.scala:163)
+[2022-01-30, 23:59:37 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$1(SQLExecution.scala:90)
+[2022-01-30, 23:59:37 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:775)
+[2022-01-30, 23:59:37 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.execution.SQLExecution$.withNewExecutionId(SQLExecution.scala:64)
+[2022-01-30, 23:59:37 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.execution.QueryExecution$$anonfun$eagerlyExecuteCommands$1.applyOrElse(QueryExecution.scala:110)
+[2022-01-30, 23:59:37 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.execution.QueryExecution$$anonfun$eagerlyExecuteCommands$1.applyOrElse(QueryExecution.scala:106)
+[2022-01-30, 23:59:37 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.catalyst.trees.TreeNode.$anonfun$transformDownWithPruning$1(TreeNode.scala:481)
+[2022-01-30, 23:59:37 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.catalyst.trees.CurrentOrigin$.withOrigin(TreeNode.scala:82)
+[2022-01-30, 23:59:37 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.catalyst.trees.TreeNode.transformDownWithPruning(TreeNode.scala:481)
+[2022-01-30, 23:59:37 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.org$apache$spark$sql$catalyst$plans$logical$AnalysisHelper$$super$transformDownWithPruning(LogicalPlan.scala:30)
+[2022-01-30, 23:59:37 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper.transformDownWithPruning(AnalysisHelper.scala:267)
+[2022-01-30, 23:59:37 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper.transformDownWithPruning$(AnalysisHelper.scala:263)
+[2022-01-30, 23:59:37 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.transformDownWithPruning(LogicalPlan.scala:30)
+[2022-01-30, 23:59:37 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.transformDownWithPruning(LogicalPlan.scala:30)
+[2022-01-30, 23:59:37 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.catalyst.trees.TreeNode.transformDown(TreeNode.scala:457)
+[2022-01-30, 23:59:37 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.execution.QueryExecution.eagerlyExecuteCommands(QueryExecution.scala:106)
+[2022-01-30, 23:59:37 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.execution.QueryExecution.commandExecuted$lzycompute(QueryExecution.scala:93)
+[2022-01-30, 23:59:37 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.execution.QueryExecution.commandExecuted(QueryExecution.scala:91)
+[2022-01-30, 23:59:37 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.Dataset.<init>(Dataset.scala:219)
+[2022-01-30, 23:59:37 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.Dataset$.$anonfun$ofRows$2(Dataset.scala:99)
+[2022-01-30, 23:59:37 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:775)
+[2022-01-30, 23:59:37 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.Dataset$.ofRows(Dataset.scala:96)
+[2022-01-30, 23:59:37 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.SparkSession.$anonfun$sql$1(SparkSession.scala:618)
+[2022-01-30, 23:59:37 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:775)
+[2022-01-30, 23:59:37 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.SparkSession.sql(SparkSession.scala:613)
+[2022-01-30, 23:59:37 ] {subprocess.py:89} INFO - 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+[2022-01-30, 23:59:37 ] {subprocess.py:89} INFO - 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+[2022-01-30, 23:59:37 ] {subprocess.py:89} INFO - 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+[2022-01-30, 23:59:37 ] {subprocess.py:89} INFO - 	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+[2022-01-30, 23:59:37 ] {subprocess.py:89} INFO - 	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+[2022-01-30, 23:59:37 ] {subprocess.py:89} INFO - 	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:357)
+[2022-01-30, 23:59:37 ] {subprocess.py:89} INFO - 	at py4j.Gateway.invoke(Gateway.java:282)
+[2022-01-30, 23:59:37 ] {subprocess.py:89} INFO - 	at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+[2022-01-30, 23:59:37 ] {subprocess.py:89} INFO - 	at py4j.commands.CallCommand.execute(CallCommand.java:79)
+[2022-01-30, 23:59:37 ] {subprocess.py:89} INFO - 	at py4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:182)
+[2022-01-30, 23:59:37 ] {subprocess.py:89} INFO - 	at py4j.ClientServerConnection.run(ClientServerConnection.java:106)
+[2022-01-30, 23:59:37 ] {subprocess.py:89} INFO - 	at java.base/java.lang.Thread.run(Thread.java:829)
+[2022-01-30, 23:59:37 ] {subprocess.py:89} INFO - 
+[2022-01-30, 23:59:37 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:37  INFO metastore.HiveMetaStore: 0: get_database: mini_project1
+[2022-01-30, 23:59:37 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:37  INFO HiveMetaStore.audit: ugi=harsh	ip=unknown-ip-addr	cmd=get_database: mini_project1
+[2022-01-30, 23:59:37 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:37  INFO metastore.HiveMetaStore: 0: get_databases: *
+[2022-01-30, 23:59:37 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:37  INFO HiveMetaStore.audit: ugi=harsh	ip=unknown-ip-addr	cmd=get_databases: *
+[2022-01-30, 23:59:37 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:37  INFO codegen.CodeGenerator: Code generated in 146.481887 ms
+[2022-01-30, 23:59:37 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:37  INFO codegen.CodeGenerator: Code generated in 6.297649 ms
+[2022-01-30, 23:59:37 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:37  INFO codegen.CodeGenerator: Code generated in 6.527699 ms
+[2022-01-30, 23:59:37 ] {subprocess.py:89} INFO - +-------------+
+[2022-01-30, 23:59:37 ] {subprocess.py:89} INFO - |    namespace|
+[2022-01-30, 23:59:37 ] {subprocess.py:89} INFO - +-------------+
+[2022-01-30, 23:59:37 ] {subprocess.py:89} INFO - |      default|
+[2022-01-30, 23:59:37 ] {subprocess.py:89} INFO - |mini_project1|
+[2022-01-30, 23:59:37 ] {subprocess.py:89} INFO - |       report|
+[2022-01-30, 23:59:37 ] {subprocess.py:89} INFO - +-------------+
+[2022-01-30, 23:59:37 ] {subprocess.py:89} INFO - 
+[2022-01-30, 23:59:37 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:37  INFO metastore.HiveMetaStore: 0: get_database: mini_project1
+[2022-01-30, 23:59:37 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:37  INFO HiveMetaStore.audit: ugi=harsh	ip=unknown-ip-addr	cmd=get_database: mini_project1
+[2022-01-30, 23:59:37 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:37  INFO metastore.HiveMetaStore: 0: get_database: mini_project1
+[2022-01-30, 23:59:37 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:37  INFO HiveMetaStore.audit: ugi=harsh	ip=unknown-ip-addr	cmd=get_database: mini_project1
+[2022-01-30, 23:59:37 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:37  INFO metastore.HiveMetaStore: 0: get_database: mini_project1
+[2022-01-30, 23:59:37 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:37  INFO HiveMetaStore.audit: ugi=harsh	ip=unknown-ip-addr	cmd=get_database: mini_project1
+[2022-01-30, 23:59:37 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:37  INFO metastore.HiveMetaStore: 0: get_table : db=mini_project1 tbl=staging1
+[2022-01-30, 23:59:37 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:37  INFO HiveMetaStore.audit: ugi=harsh	ip=unknown-ip-addr	cmd=get_table : db=mini_project1 tbl=staging1
+[2022-01-30, 23:59:37 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:37  INFO metastore.HiveMetaStore: 0: get_database: mini_project1
+[2022-01-30, 23:59:37 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:37  INFO HiveMetaStore.audit: ugi=harsh	ip=unknown-ip-addr	cmd=get_database: mini_project1
+[2022-01-30, 23:59:37 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:37  INFO metastore.HiveMetaStore: 0: get_table : db=mini_project1 tbl=staging1
+[2022-01-30, 23:59:37 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:37  INFO HiveMetaStore.audit: ugi=harsh	ip=unknown-ip-addr	cmd=get_table : db=mini_project1 tbl=staging1
+[2022-01-30, 23:59:37 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:37  INFO sqlstd.SQLStdHiveAccessController: Created SQLStdHiveAccessController for session context : HiveAuthzSessionContext [sessionString=ed20095d-22a7-4a21-8db7-958d99284b0c, clientType=HIVECLI]
+[2022-01-30, 23:59:37 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:37  WARN session.SessionState: METASTORE_FILTER_HOOK will be ignored, since hive.security.authorization.manager is set to instance of HiveAuthorizerFactory.
+[2022-01-30, 23:59:37 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:37  INFO hive.metastore: Mestastore configuration hive.metastore.filter.hook changed from org.apache.hadoop.hive.metastore.DefaultMetaStoreFilterHookImpl to org.apache.hadoop.hive.ql.security.authorization.plugin.AuthorizationMetaStoreFilterHook
+[2022-01-30, 23:59:37 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:37  INFO metastore.HiveMetaStore: 0: Cleaning up thread local RawStore...
+[2022-01-30, 23:59:37 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:37  INFO HiveMetaStore.audit: ugi=harsh	ip=unknown-ip-addr	cmd=Cleaning up thread local RawStore...
+[2022-01-30, 23:59:37 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:37  INFO metastore.HiveMetaStore: 0: Done cleaning up thread local RawStore
+[2022-01-30, 23:59:37 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:37  INFO HiveMetaStore.audit: ugi=harsh	ip=unknown-ip-addr	cmd=Done cleaning up thread local RawStore
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:38  INFO metastore.HiveMetaStore: 0: create_table: Table(tableName:staging1, dbName:mini_project1, owner:harsh, createTime:1643547577, lastAccessTime:0, retention:0, sd:StorageDescriptor(cols:[FieldSchema(name:Clump, type:int, comment:null), FieldSchema(name:UniCell_Size, type:int, comment:null), FieldSchema(name:Uni_CellShape, type:int, comment:null), FieldSchema(name:MargAdh, type:int, comment:null), FieldSchema(name:SEpith, type:int, comment:null), FieldSchema(name:BareN, type:int, comment:null), FieldSchema(name:Bchromatin, type:int, comment:null), FieldSchema(name:NoemN, type:int, comment:null), FieldSchema(name:Mitoses, type:int, comment:null), FieldSchema(name:Class, type:string, comment:null)], location:hdfs://localhost:9000/mini_project/raw/stage/persist, inputFormat:org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat, outputFormat:org.apache.hadoop.hive.ql.io.parquet.MapredParquetOutputFormat, compressed:false, numBuckets:-1, serdeInfo:SerDeInfo(name:null, serializationLib:org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe, parameters:{serialization.format=1}), bucketCols:[], sortCols:[], parameters:{}, skewedInfo:SkewedInfo(skewedColNames:[], skewedColValues:[], skewedColValueLocationMaps:{})), partitionKeys:[], parameters:{EXTERNAL=TRUE, spark.sql.sources.schema={"type":"struct","fields":[{"name":"Clump","type":"integer","nullable":true,"metadata":{}},{"name":"UniCell_Size","type":"integer","nullable":true,"metadata":{}},{"name":"Uni_CellShape","type":"integer","nullable":true,"metadata":{}},{"name":"MargAdh","type":"integer","nullable":true,"metadata":{}},{"name":"SEpith","type":"integer","nullable":true,"metadata":{}},{"name":"BareN","type":"integer","nullable":true,"metadata":{}},{"name":"Bchromatin","type":"integer","nullable":true,"metadata":{}},{"name":"NoemN","type":"integer","nullable":true,"metadata":{}},{"name":"Mitoses","type":"integer","nullable":true,"metadata":{}},{"name":"Class","type":"string","nullable":true,"metadata":{}}]}, spark.sql.create.version=3.2.0}, viewOriginalText:null, viewExpandedText:null, tableType:EXTERNAL_TABLE, privileges:PrincipalPrivilegeSet(userPrivileges:{harsh=[PrivilegeGrantInfo(privilege:INSERT, createTime:-1, grantor:harsh, grantorType:USER, grantOption:true), PrivilegeGrantInfo(privilege:SELECT, createTime:-1, grantor:harsh, grantorType:USER, grantOption:true), PrivilegeGrantInfo(privilege:UPDATE, createTime:-1, grantor:harsh, grantorType:USER, grantOption:true), PrivilegeGrantInfo(privilege:DELETE, createTime:-1, grantor:harsh, grantorType:USER, grantOption:true)]}, groupPrivileges:null, rolePrivileges:null))
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:38  INFO HiveMetaStore.audit: ugi=harsh	ip=unknown-ip-addr	cmd=create_table: Table(tableName:staging1, dbName:mini_project1, owner:harsh, createTime:1643547577, lastAccessTime:0, retention:0, sd:StorageDescriptor(cols:[FieldSchema(name:Clump, type:int, comment:null), FieldSchema(name:UniCell_Size, type:int, comment:null), FieldSchema(name:Uni_CellShape, type:int, comment:null), FieldSchema(name:MargAdh, type:int, comment:null), FieldSchema(name:SEpith, type:int, comment:null), FieldSchema(name:BareN, type:int, comment:null), FieldSchema(name:Bchromatin, type:int, comment:null), FieldSchema(name:NoemN, type:int, comment:null), FieldSchema(name:Mitoses, type:int, comment:null), FieldSchema(name:Class, type:string, comment:null)], location:hdfs://localhost:9000/mini_project/raw/stage/persist, inputFormat:org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat, outputFormat:org.apache.hadoop.hive.ql.io.parquet.MapredParquetOutputFormat, compressed:false, numBuckets:-1, serdeInfo:SerDeInfo(name:null, serializationLib:org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe, parameters:{serialization.format=1}), bucketCols:[], sortCols:[], parameters:{}, skewedInfo:SkewedInfo(skewedColNames:[], skewedColValues:[], skewedColValueLocationMaps:{})), partitionKeys:[], parameters:{EXTERNAL=TRUE, spark.sql.sources.schema={"type":"struct","fields":[{"name":"Clump","type":"integer","nullable":true,"metadata":{}},{"name":"UniCell_Size","type":"integer","nullable":true,"metadata":{}},{"name":"Uni_CellShape","type":"integer","nullable":true,"metadata":{}},{"name":"MargAdh","type":"integer","nullable":true,"metadata":{}},{"name":"SEpith","type":"integer","nullable":true,"metadata":{}},{"name":"BareN","type":"integer","nullable":true,"metadata":{}},{"name":"Bchromatin","type":"integer","nullable":true,"metadata":{}},{"name":"NoemN","type":"integer","nullable":true,"metadata":{}},{"name":"Mitoses","type":"integer","nullable":true,"metadata":{}},{"name":"Class","type":"string","nullable":true,"metadata":{}}]}, spark.sql.create.version=3.2.0}, viewOriginalText:null, viewExpandedText:null, tableType:EXTERNAL_TABLE, privileges:PrincipalPrivilegeSet(userPrivileges:{harsh=[PrivilegeGrantInfo(privilege:INSERT, createTime:-1, grantor:harsh, grantorType:USER, grantOption:true), PrivilegeGrantInfo(privilege:SELECT, createTime:-1, grantor:harsh, grantorType:USER, grantOption:true), PrivilegeGrantInfo(privilege:UPDATE, createTime:-1, grantor:harsh, grantorType:USER, grantOption:true), PrivilegeGrantInfo(privilege:DELETE, createTime:-1, grantor:harsh, grantorType:USER, grantOption:true)]}, groupPrivileges:null, rolePrivileges:null))
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:38  WARN conf.HiveConf: HiveConf of name hive.internal.ss.authz.settings.applied.marker does not exist
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:38  WARN conf.HiveConf: HiveConf of name hive.stats.jdbc.timeout does not exist
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:38  WARN conf.HiveConf: HiveConf of name hive.stats.retries.wait does not exist
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:38  INFO metastore.HiveMetaStore: 0: Opening raw store with implementation class:org.apache.hadoop.hive.metastore.ObjectStore
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:38  INFO metastore.ObjectStore: ObjectStore, initialize called
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:38  INFO metastore.MetaStoreDirectSql: Using direct SQL, underlying DB is DERBY
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:38  INFO metastore.ObjectStore: Initialized ObjectStore
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:38  ERROR metastore.RetryingHMSHandler: AlreadyExistsException(message:Table staging1 already exists)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at org.apache.hadoop.hive.metastore.HiveMetaStore$HMSHandler.create_table_core(HiveMetaStore.java:1416)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at org.apache.hadoop.hive.metastore.HiveMetaStore$HMSHandler.create_table_with_environment_context(HiveMetaStore.java:1503)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at org.apache.hadoop.hive.metastore.RetryingHMSHandler.invokeInternal(RetryingHMSHandler.java:148)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at org.apache.hadoop.hive.metastore.RetryingHMSHandler.invoke(RetryingHMSHandler.java:107)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at com.sun.proxy.$Proxy29.create_table_with_environment_context(Unknown Source)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at org.apache.hadoop.hive.metastore.HiveMetaStoreClient.create_table_with_environment_context(HiveMetaStoreClient.java:2396)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at org.apache.hadoop.hive.ql.metadata.SessionHiveMetaStoreClient.create_table_with_environment_context(SessionHiveMetaStoreClient.java:93)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at org.apache.hadoop.hive.metastore.HiveMetaStoreClient.createTable(HiveMetaStoreClient.java:750)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at org.apache.hadoop.hive.metastore.HiveMetaStoreClient.createTable(HiveMetaStoreClient.java:738)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at org.apache.hadoop.hive.metastore.RetryingMetaStoreClient.invoke(RetryingMetaStoreClient.java:173)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at com.sun.proxy.$Proxy30.createTable(Unknown Source)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at org.apache.hadoop.hive.ql.metadata.Hive.createTable(Hive.java:859)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at org.apache.hadoop.hive.ql.metadata.Hive.createTable(Hive.java:874)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.hive.client.HiveClientImpl.$anonfun$createTable$1(HiveClientImpl.scala:553)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.hive.client.HiveClientImpl.$anonfun$withHiveState$1(HiveClientImpl.scala:303)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.hive.client.HiveClientImpl.liftedTree1$1(HiveClientImpl.scala:234)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.hive.client.HiveClientImpl.retryLocked(HiveClientImpl.scala:233)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.hive.client.HiveClientImpl.withHiveState(HiveClientImpl.scala:283)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.hive.client.HiveClientImpl.createTable(HiveClientImpl.scala:551)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.hive.HiveExternalCatalog.$anonfun$createTable$1(HiveExternalCatalog.scala:287)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.hive.HiveExternalCatalog.withClient(HiveExternalCatalog.scala:102)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.hive.HiveExternalCatalog.createTable(HiveExternalCatalog.scala:245)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.catalyst.catalog.ExternalCatalogWithListener.createTable(ExternalCatalogWithListener.scala:94)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.catalyst.catalog.SessionCatalog.createTable(SessionCatalog.scala:376)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.execution.command.CreateTableCommand.run(tables.scala:167)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.execution.command.ExecutedCommandExec.sideEffectResult$lzycompute(commands.scala:75)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.execution.command.ExecutedCommandExec.sideEffectResult(commands.scala:73)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.execution.command.ExecutedCommandExec.executeCollect(commands.scala:84)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.execution.QueryExecution$$anonfun$eagerlyExecuteCommands$1.$anonfun$applyOrElse$1(QueryExecution.scala:110)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$5(SQLExecution.scala:103)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.execution.SQLExecution$.withSQLConfPropagated(SQLExecution.scala:163)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$1(SQLExecution.scala:90)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:775)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.execution.SQLExecution$.withNewExecutionId(SQLExecution.scala:64)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.execution.QueryExecution$$anonfun$eagerlyExecuteCommands$1.applyOrElse(QueryExecution.scala:110)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.execution.QueryExecution$$anonfun$eagerlyExecuteCommands$1.applyOrElse(QueryExecution.scala:106)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.catalyst.trees.TreeNode.$anonfun$transformDownWithPruning$1(TreeNode.scala:481)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.catalyst.trees.CurrentOrigin$.withOrigin(TreeNode.scala:82)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.catalyst.trees.TreeNode.transformDownWithPruning(TreeNode.scala:481)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.org$apache$spark$sql$catalyst$plans$logical$AnalysisHelper$$super$transformDownWithPruning(LogicalPlan.scala:30)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper.transformDownWithPruning(AnalysisHelper.scala:267)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper.transformDownWithPruning$(AnalysisHelper.scala:263)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.transformDownWithPruning(LogicalPlan.scala:30)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.transformDownWithPruning(LogicalPlan.scala:30)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.catalyst.trees.TreeNode.transformDown(TreeNode.scala:457)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.execution.QueryExecution.eagerlyExecuteCommands(QueryExecution.scala:106)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.execution.QueryExecution.commandExecuted$lzycompute(QueryExecution.scala:93)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.execution.QueryExecution.commandExecuted(QueryExecution.scala:91)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.Dataset.<init>(Dataset.scala:219)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.Dataset$.$anonfun$ofRows$2(Dataset.scala:99)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:775)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.Dataset$.ofRows(Dataset.scala:96)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.SparkSession.$anonfun$sql$1(SparkSession.scala:618)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:775)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.SparkSession.sql(SparkSession.scala:613)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:357)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at py4j.Gateway.invoke(Gateway.java:282)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at py4j.commands.CallCommand.execute(CallCommand.java:79)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at py4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:182)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at py4j.ClientServerConnection.run(ClientServerConnection.java:106)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at java.base/java.lang.Thread.run(Thread.java:829)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:38  WARN command.SetCommand: 'SET hive.exec.dynamic.partition.mode=nonstrict' might not work, since Spark doesn't support changing the Hive config dynamically. Please pass the Hive-specific config by adding the prefix spark.hadoop (e.g. spark.hadoop.hive.exec.dynamic.partition.mode) when starting a Spark application. For details, see the link: https://spark.apache.org/docs/latest/configuration.html#dynamically-loading-spark-properties.
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:38  INFO metastore.HiveMetaStore: 0: get_database: mini_project1
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:38  INFO HiveMetaStore.audit: ugi=harsh	ip=unknown-ip-addr	cmd=get_database: mini_project1
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:38  INFO DataNucleus.Persistence: Request to load fields "comment,name,type" of class org.apache.hadoop.hive.metastore.model.MFieldSchema but object is embedded, so ignored
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:38  INFO DataNucleus.Persistence: Request to load fields "comment,name,type" of class org.apache.hadoop.hive.metastore.model.MFieldSchema but object is embedded, so ignored
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:38  INFO DataNucleus.Persistence: Request to load fields "comment,name,type" of class org.apache.hadoop.hive.metastore.model.MFieldSchema but object is embedded, so ignored
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:38  INFO DataNucleus.Persistence: Request to load fields "comment,name,type" of class org.apache.hadoop.hive.metastore.model.MFieldSchema but object is embedded, so ignored
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:38  INFO DataNucleus.Persistence: Request to load fields "comment,name,type" of class org.apache.hadoop.hive.metastore.model.MFieldSchema but object is embedded, so ignored
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:38  INFO DataNucleus.Persistence: Request to load fields "comment,name,type" of class org.apache.hadoop.hive.metastore.model.MFieldSchema but object is embedded, so ignored
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:38  INFO DataNucleus.Persistence: Request to load fields "comment,name,type" of class org.apache.hadoop.hive.metastore.model.MFieldSchema but object is embedded, so ignored
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:38  INFO DataNucleus.Persistence: Request to load fields "comment,name,type" of class org.apache.hadoop.hive.metastore.model.MFieldSchema but object is embedded, so ignored
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:38  INFO DataNucleus.Persistence: Request to load fields "comment,name,type" of class org.apache.hadoop.hive.metastore.model.MFieldSchema but object is embedded, so ignored
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:38  INFO DataNucleus.Persistence: Request to load fields "comment,name,type" of class org.apache.hadoop.hive.metastore.model.MFieldSchema but object is embedded, so ignored
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:38  INFO DataNucleus.Persistence: Request to load fields "comment,name,type" of class org.apache.hadoop.hive.metastore.model.MFieldSchema but object is embedded, so ignored
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:38  INFO DataNucleus.Persistence: Request to load fields "comment,name,type" of class org.apache.hadoop.hive.metastore.model.MFieldSchema but object is embedded, so ignored
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:38  INFO DataNucleus.Persistence: Request to load fields "comment,name,type" of class org.apache.hadoop.hive.metastore.model.MFieldSchema but object is embedded, so ignored
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:38  INFO DataNucleus.Persistence: Request to load fields "comment,name,type" of class org.apache.hadoop.hive.metastore.model.MFieldSchema but object is embedded, so ignored
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:38  INFO DataNucleus.Persistence: Request to load fields "comment,name,type" of class org.apache.hadoop.hive.metastore.model.MFieldSchema but object is embedded, so ignored
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:38  INFO DataNucleus.Persistence: Request to load fields "comment,name,type" of class org.apache.hadoop.hive.metastore.model.MFieldSchema but object is embedded, so ignored
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:38  INFO DataNucleus.Persistence: Request to load fields "comment,name,type" of class org.apache.hadoop.hive.metastore.model.MFieldSchema but object is embedded, so ignored
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:38  INFO DataNucleus.Persistence: Request to load fields "comment,name,type" of class org.apache.hadoop.hive.metastore.model.MFieldSchema but object is embedded, so ignored
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:38  INFO DataNucleus.Persistence: Request to load fields "comment,name,type" of class org.apache.hadoop.hive.metastore.model.MFieldSchema but object is embedded, so ignored
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:38  INFO DataNucleus.Persistence: Request to load fields "comment,name,type" of class org.apache.hadoop.hive.metastore.model.MFieldSchema but object is embedded, so ignored
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:38  INFO metastore.HiveMetaStore: 0: get_database: mini_project1
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:38  INFO HiveMetaStore.audit: ugi=harsh	ip=unknown-ip-addr	cmd=get_database: mini_project1
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:38  INFO metastore.HiveMetaStore: 0: get_database: mini_project1
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:38  INFO HiveMetaStore.audit: ugi=harsh	ip=unknown-ip-addr	cmd=get_database: mini_project1
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:38  INFO metastore.HiveMetaStore: 0: get_table : db=mini_project1 tbl=cancer_partitioned
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:38  INFO HiveMetaStore.audit: ugi=harsh	ip=unknown-ip-addr	cmd=get_table : db=mini_project1 tbl=cancer_partitioned
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:38  INFO metastore.HiveMetaStore: 0: get_database: mini_project1
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:38  INFO HiveMetaStore.audit: ugi=harsh	ip=unknown-ip-addr	cmd=get_database: mini_project1
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:38  INFO metastore.HiveMetaStore: 0: get_table : db=mini_project1 tbl=cancer_partitioned
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:38  INFO HiveMetaStore.audit: ugi=harsh	ip=unknown-ip-addr	cmd=get_table : db=mini_project1 tbl=cancer_partitioned
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:38  INFO metastore.HiveMetaStore: 0: create_table: Table(tableName:cancer_partitioned, dbName:mini_project1, owner:harsh, createTime:1643547578, lastAccessTime:0, retention:0, sd:StorageDescriptor(cols:[FieldSchema(name:Clump, type:int, comment:null), FieldSchema(name:UniCell_Size, type:int, comment:null), FieldSchema(name:Uni_CellShape, type:int, comment:null), FieldSchema(name:MargAdh, type:int, comment:null), FieldSchema(name:SEpith, type:int, comment:null), FieldSchema(name:BareN, type:int, comment:null), FieldSchema(name:Bchromatin, type:int, comment:null), FieldSchema(name:NoemN, type:int, comment:null), FieldSchema(name:Mitoses, type:int, comment:null)], location:hdfs://localhost:9000/mini_project/raw/partition, inputFormat:org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat, outputFormat:org.apache.hadoop.hive.ql.io.parquet.MapredParquetOutputFormat, compressed:false, numBuckets:-1, serdeInfo:SerDeInfo(name:null, serializationLib:org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe, parameters:{serialization.format=1}), bucketCols:[], sortCols:[], parameters:{}, skewedInfo:SkewedInfo(skewedColNames:[], skewedColValues:[], skewedColValueLocationMaps:{})), partitionKeys:[FieldSchema(name:Class, type:string, comment:null)], parameters:{EXTERNAL=TRUE, spark.sql.sources.schema.numPartCols=1, spark.sql.sources.schema.partCol.0=Class, spark.sql.sources.schema={"type":"struct","fields":[{"name":"Clump","type":"integer","nullable":true,"metadata":{}},{"name":"UniCell_Size","type":"integer","nullable":true,"metadata":{}},{"name":"Uni_CellShape","type":"integer","nullable":true,"metadata":{}},{"name":"MargAdh","type":"integer","nullable":true,"metadata":{}},{"name":"SEpith","type":"integer","nullable":true,"metadata":{}},{"name":"BareN","type":"integer","nullable":true,"metadata":{}},{"name":"Bchromatin","type":"integer","nullable":true,"metadata":{}},{"name":"NoemN","type":"integer","nullable":true,"metadata":{}},{"name":"Mitoses","type":"integer","nullable":true,"metadata":{}},{"name":"Class","type":"string","nullable":true,"metadata":{}}]}, spark.sql.create.version=3.2.0}, viewOriginalText:null, viewExpandedText:null, tableType:EXTERNAL_TABLE, privileges:PrincipalPrivilegeSet(userPrivileges:{harsh=[PrivilegeGrantInfo(privilege:INSERT, createTime:-1, grantor:harsh, grantorType:USER, grantOption:true), PrivilegeGrantInfo(privilege:SELECT, createTime:-1, grantor:harsh, grantorType:USER, grantOption:true), PrivilegeGrantInfo(privilege:UPDATE, createTime:-1, grantor:harsh, grantorType:USER, grantOption:true), PrivilegeGrantInfo(privilege:DELETE, createTime:-1, grantor:harsh, grantorType:USER, grantOption:true)]}, groupPrivileges:null, rolePrivileges:null))
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:38  INFO HiveMetaStore.audit: ugi=harsh	ip=unknown-ip-addr	cmd=create_table: Table(tableName:cancer_partitioned, dbName:mini_project1, owner:harsh, createTime:1643547578, lastAccessTime:0, retention:0, sd:StorageDescriptor(cols:[FieldSchema(name:Clump, type:int, comment:null), FieldSchema(name:UniCell_Size, type:int, comment:null), FieldSchema(name:Uni_CellShape, type:int, comment:null), FieldSchema(name:MargAdh, type:int, comment:null), FieldSchema(name:SEpith, type:int, comment:null), FieldSchema(name:BareN, type:int, comment:null), FieldSchema(name:Bchromatin, type:int, comment:null), FieldSchema(name:NoemN, type:int, comment:null), FieldSchema(name:Mitoses, type:int, comment:null)], location:hdfs://localhost:9000/mini_project/raw/partition, inputFormat:org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat, outputFormat:org.apache.hadoop.hive.ql.io.parquet.MapredParquetOutputFormat, compressed:false, numBuckets:-1, serdeInfo:SerDeInfo(name:null, serializationLib:org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe, parameters:{serialization.format=1}), bucketCols:[], sortCols:[], parameters:{}, skewedInfo:SkewedInfo(skewedColNames:[], skewedColValues:[], skewedColValueLocationMaps:{})), partitionKeys:[FieldSchema(name:Class, type:string, comment:null)], parameters:{EXTERNAL=TRUE, spark.sql.sources.schema.numPartCols=1, spark.sql.sources.schema.partCol.0=Class, spark.sql.sources.schema={"type":"struct","fields":[{"name":"Clump","type":"integer","nullable":true,"metadata":{}},{"name":"UniCell_Size","type":"integer","nullable":true,"metadata":{}},{"name":"Uni_CellShape","type":"integer","nullable":true,"metadata":{}},{"name":"MargAdh","type":"integer","nullable":true,"metadata":{}},{"name":"SEpith","type":"integer","nullable":true,"metadata":{}},{"name":"BareN","type":"integer","nullable":true,"metadata":{}},{"name":"Bchromatin","type":"integer","nullable":true,"metadata":{}},{"name":"NoemN","type":"integer","nullable":true,"metadata":{}},{"name":"Mitoses","type":"integer","nullable":true,"metadata":{}},{"name":"Class","type":"string","nullable":true,"metadata":{}}]}, spark.sql.create.version=3.2.0}, viewOriginalText:null, viewExpandedText:null, tableType:EXTERNAL_TABLE, privileges:PrincipalPrivilegeSet(userPrivileges:{harsh=[PrivilegeGrantInfo(privilege:INSERT, createTime:-1, grantor:harsh, grantorType:USER, grantOption:true), PrivilegeGrantInfo(privilege:SELECT, createTime:-1, grantor:harsh, grantorType:USER, grantOption:true), PrivilegeGrantInfo(privilege:UPDATE, createTime:-1, grantor:harsh, grantorType:USER, grantOption:true), PrivilegeGrantInfo(privilege:DELETE, createTime:-1, grantor:harsh, grantorType:USER, grantOption:true)]}, groupPrivileges:null, rolePrivileges:null))
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:38  ERROR metastore.RetryingHMSHandler: AlreadyExistsException(message:Table cancer_partitioned already exists)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at org.apache.hadoop.hive.metastore.HiveMetaStore$HMSHandler.create_table_core(HiveMetaStore.java:1416)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at org.apache.hadoop.hive.metastore.HiveMetaStore$HMSHandler.create_table_with_environment_context(HiveMetaStore.java:1503)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at org.apache.hadoop.hive.metastore.RetryingHMSHandler.invokeInternal(RetryingHMSHandler.java:148)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at org.apache.hadoop.hive.metastore.RetryingHMSHandler.invoke(RetryingHMSHandler.java:107)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at com.sun.proxy.$Proxy29.create_table_with_environment_context(Unknown Source)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at org.apache.hadoop.hive.metastore.HiveMetaStoreClient.create_table_with_environment_context(HiveMetaStoreClient.java:2396)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at org.apache.hadoop.hive.ql.metadata.SessionHiveMetaStoreClient.create_table_with_environment_context(SessionHiveMetaStoreClient.java:93)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at org.apache.hadoop.hive.metastore.HiveMetaStoreClient.createTable(HiveMetaStoreClient.java:750)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at org.apache.hadoop.hive.metastore.HiveMetaStoreClient.createTable(HiveMetaStoreClient.java:738)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at org.apache.hadoop.hive.metastore.RetryingMetaStoreClient.invoke(RetryingMetaStoreClient.java:173)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at com.sun.proxy.$Proxy30.createTable(Unknown Source)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at org.apache.hadoop.hive.ql.metadata.Hive.createTable(Hive.java:859)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at org.apache.hadoop.hive.ql.metadata.Hive.createTable(Hive.java:874)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.hive.client.HiveClientImpl.$anonfun$createTable$1(HiveClientImpl.scala:553)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.hive.client.HiveClientImpl.$anonfun$withHiveState$1(HiveClientImpl.scala:303)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.hive.client.HiveClientImpl.liftedTree1$1(HiveClientImpl.scala:234)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.hive.client.HiveClientImpl.retryLocked(HiveClientImpl.scala:233)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.hive.client.HiveClientImpl.withHiveState(HiveClientImpl.scala:283)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.hive.client.HiveClientImpl.createTable(HiveClientImpl.scala:551)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.hive.HiveExternalCatalog.$anonfun$createTable$1(HiveExternalCatalog.scala:287)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.hive.HiveExternalCatalog.withClient(HiveExternalCatalog.scala:102)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.hive.HiveExternalCatalog.createTable(HiveExternalCatalog.scala:245)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.catalyst.catalog.ExternalCatalogWithListener.createTable(ExternalCatalogWithListener.scala:94)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.catalyst.catalog.SessionCatalog.createTable(SessionCatalog.scala:376)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.execution.command.CreateTableCommand.run(tables.scala:167)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.execution.command.ExecutedCommandExec.sideEffectResult$lzycompute(commands.scala:75)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.execution.command.ExecutedCommandExec.sideEffectResult(commands.scala:73)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.execution.command.ExecutedCommandExec.executeCollect(commands.scala:84)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.execution.QueryExecution$$anonfun$eagerlyExecuteCommands$1.$anonfun$applyOrElse$1(QueryExecution.scala:110)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$5(SQLExecution.scala:103)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.execution.SQLExecution$.withSQLConfPropagated(SQLExecution.scala:163)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$1(SQLExecution.scala:90)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:775)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.execution.SQLExecution$.withNewExecutionId(SQLExecution.scala:64)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.execution.QueryExecution$$anonfun$eagerlyExecuteCommands$1.applyOrElse(QueryExecution.scala:110)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.execution.QueryExecution$$anonfun$eagerlyExecuteCommands$1.applyOrElse(QueryExecution.scala:106)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.catalyst.trees.TreeNode.$anonfun$transformDownWithPruning$1(TreeNode.scala:481)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.catalyst.trees.CurrentOrigin$.withOrigin(TreeNode.scala:82)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.catalyst.trees.TreeNode.transformDownWithPruning(TreeNode.scala:481)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.org$apache$spark$sql$catalyst$plans$logical$AnalysisHelper$$super$transformDownWithPruning(LogicalPlan.scala:30)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper.transformDownWithPruning(AnalysisHelper.scala:267)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper.transformDownWithPruning$(AnalysisHelper.scala:263)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.transformDownWithPruning(LogicalPlan.scala:30)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.transformDownWithPruning(LogicalPlan.scala:30)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.catalyst.trees.TreeNode.transformDown(TreeNode.scala:457)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.execution.QueryExecution.eagerlyExecuteCommands(QueryExecution.scala:106)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.execution.QueryExecution.commandExecuted$lzycompute(QueryExecution.scala:93)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.execution.QueryExecution.commandExecuted(QueryExecution.scala:91)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.Dataset.<init>(Dataset.scala:219)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.Dataset$.$anonfun$ofRows$2(Dataset.scala:99)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:775)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.Dataset$.ofRows(Dataset.scala:96)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.SparkSession.$anonfun$sql$1(SparkSession.scala:618)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:775)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.SparkSession.sql(SparkSession.scala:613)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:357)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at py4j.Gateway.invoke(Gateway.java:282)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at py4j.commands.CallCommand.execute(CallCommand.java:79)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at py4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:182)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at py4j.ClientServerConnection.run(ClientServerConnection.java:106)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 	at java.base/java.lang.Thread.run(Thread.java:829)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:38  INFO metastore.HiveMetaStore: 0: get_database: mini_project1
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:38  INFO HiveMetaStore.audit: ugi=harsh	ip=unknown-ip-addr	cmd=get_database: mini_project1
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:38  INFO DataNucleus.Persistence: Request to load fields "comment,name,type" of class org.apache.hadoop.hive.metastore.model.MFieldSchema but object is embedded, so ignored
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:38  INFO DataNucleus.Persistence: Request to load fields "comment,name,type" of class org.apache.hadoop.hive.metastore.model.MFieldSchema but object is embedded, so ignored
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:38  INFO DataNucleus.Persistence: Request to load fields "comment,name,type" of class org.apache.hadoop.hive.metastore.model.MFieldSchema but object is embedded, so ignored
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:38  INFO DataNucleus.Persistence: Request to load fields "comment,name,type" of class org.apache.hadoop.hive.metastore.model.MFieldSchema but object is embedded, so ignored
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:38  INFO DataNucleus.Persistence: Request to load fields "comment,name,type" of class org.apache.hadoop.hive.metastore.model.MFieldSchema but object is embedded, so ignored
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:38  INFO DataNucleus.Persistence: Request to load fields "comment,name,type" of class org.apache.hadoop.hive.metastore.model.MFieldSchema but object is embedded, so ignored
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:38  INFO DataNucleus.Persistence: Request to load fields "comment,name,type" of class org.apache.hadoop.hive.metastore.model.MFieldSchema but object is embedded, so ignored
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:38  INFO DataNucleus.Persistence: Request to load fields "comment,name,type" of class org.apache.hadoop.hive.metastore.model.MFieldSchema but object is embedded, so ignored
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:38  INFO DataNucleus.Persistence: Request to load fields "comment,name,type" of class org.apache.hadoop.hive.metastore.model.MFieldSchema but object is embedded, so ignored
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:38  INFO DataNucleus.Persistence: Request to load fields "comment,name,type" of class org.apache.hadoop.hive.metastore.model.MFieldSchema but object is embedded, so ignored
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:38  INFO DataNucleus.Persistence: Request to load fields "comment,name,type" of class org.apache.hadoop.hive.metastore.model.MFieldSchema but object is embedded, so ignored
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:38  INFO DataNucleus.Persistence: Request to load fields "comment,name,type" of class org.apache.hadoop.hive.metastore.model.MFieldSchema but object is embedded, so ignored
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:38  INFO DataNucleus.Persistence: Request to load fields "comment,name,type" of class org.apache.hadoop.hive.metastore.model.MFieldSchema but object is embedded, so ignored
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:38  INFO DataNucleus.Persistence: Request to load fields "comment,name,type" of class org.apache.hadoop.hive.metastore.model.MFieldSchema but object is embedded, so ignored
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:38  INFO DataNucleus.Persistence: Request to load fields "comment,name,type" of class org.apache.hadoop.hive.metastore.model.MFieldSchema but object is embedded, so ignored
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:38  INFO DataNucleus.Persistence: Request to load fields "comment,name,type" of class org.apache.hadoop.hive.metastore.model.MFieldSchema but object is embedded, so ignored
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:38  INFO DataNucleus.Persistence: Request to load fields "comment,name,type" of class org.apache.hadoop.hive.metastore.model.MFieldSchema but object is embedded, so ignored
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:38  INFO DataNucleus.Persistence: Request to load fields "comment,name,type" of class org.apache.hadoop.hive.metastore.model.MFieldSchema but object is embedded, so ignored
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:38  INFO DataNucleus.Persistence: Request to load fields "comment,name,type" of class org.apache.hadoop.hive.metastore.model.MFieldSchema but object is embedded, so ignored
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:38  INFO DataNucleus.Persistence: Request to load fields "comment,name,type" of class org.apache.hadoop.hive.metastore.model.MFieldSchema but object is embedded, so ignored
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:38  INFO metastore.HiveMetaStore: 0: get_table : db=mini_project1 tbl=staging1
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:38  INFO HiveMetaStore.audit: ugi=harsh	ip=unknown-ip-addr	cmd=get_table : db=mini_project1 tbl=staging1
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:38  INFO metastore.HiveMetaStore: 0: get_table : db=mini_project1 tbl=staging1
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:38  INFO HiveMetaStore.audit: ugi=harsh	ip=unknown-ip-addr	cmd=get_table : db=mini_project1 tbl=staging1
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:38  INFO metastore.HiveMetaStore: 0: get_database: mini_project1
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:38  INFO HiveMetaStore.audit: ugi=harsh	ip=unknown-ip-addr	cmd=get_database: mini_project1
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:38  INFO metastore.HiveMetaStore: 0: get_table : db=mini_project1 tbl=cancer_partitioned
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:38  INFO HiveMetaStore.audit: ugi=harsh	ip=unknown-ip-addr	cmd=get_table : db=mini_project1 tbl=cancer_partitioned
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:38  INFO metastore.HiveMetaStore: 0: get_table : db=mini_project1 tbl=cancer_partitioned
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:38  INFO HiveMetaStore.audit: ugi=harsh	ip=unknown-ip-addr	cmd=get_table : db=mini_project1 tbl=cancer_partitioned
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:38  INFO datasources.InMemoryFileIndex: It took 33 ms to list leaf files for 1 paths.
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:38  INFO datasources.FileSourceStrategy: Pushed Filters:
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:38  INFO datasources.FileSourceStrategy: Post-Scan Filters:
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:38  INFO datasources.FileSourceStrategy: Output Data Schema: struct<Clump: int, UniCell_Size: int, Uni_CellShape: int, MargAdh: int, SEpith: int ... 8 more fields>
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:38  INFO metastore.HiveMetaStore: 0: get_database: mini_project1
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:38  INFO HiveMetaStore.audit: ugi=harsh	ip=unknown-ip-addr	cmd=get_database: mini_project1
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:38  INFO metastore.HiveMetaStore: 0: get_table : db=mini_project1 tbl=cancer_partitioned
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:38  INFO HiveMetaStore.audit: ugi=harsh	ip=unknown-ip-addr	cmd=get_table : db=mini_project1 tbl=cancer_partitioned
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:38  INFO metastore.HiveMetaStore: 0: get_database: mini_project1
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:38  INFO HiveMetaStore.audit: ugi=harsh	ip=unknown-ip-addr	cmd=get_database: mini_project1
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:38  INFO metastore.HiveMetaStore: 0: get_table : db=mini_project1 tbl=cancer_partitioned
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:38  INFO HiveMetaStore.audit: ugi=harsh	ip=unknown-ip-addr	cmd=get_table : db=mini_project1 tbl=cancer_partitioned
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:38  INFO metastore.HiveMetaStore: 0: get_table : db=mini_project1 tbl=cancer_partitioned
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:38  INFO HiveMetaStore.audit: ugi=harsh	ip=unknown-ip-addr	cmd=get_table : db=mini_project1 tbl=cancer_partitioned
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:38  INFO metastore.HiveMetaStore: 0: get_table : db=mini_project1 tbl=cancer_partitioned
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:38  INFO HiveMetaStore.audit: ugi=harsh	ip=unknown-ip-addr	cmd=get_table : db=mini_project1 tbl=cancer_partitioned
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:38  INFO metastore.HiveMetaStore: 0: get_table : db=mini_project1 tbl=cancer_partitioned
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:38  INFO HiveMetaStore.audit: ugi=harsh	ip=unknown-ip-addr	cmd=get_table : db=mini_project1 tbl=cancer_partitioned
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:38  INFO metastore.HiveMetaStore: 0: get_partitions_ps_with_auth : db=mini_project1 tbl=cancer_partitioned[]
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:38  INFO HiveMetaStore.audit: ugi=harsh	ip=unknown-ip-addr	cmd=get_partitions_ps_with_auth : db=mini_project1 tbl=cancer_partitioned[]
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:38  INFO parquet.ParquetFileFormat: Using default output committer for Parquet: org.apache.parquet.hadoop.ParquetOutputCommitter
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:38  INFO output.FileOutputCommitter: File Output Committer Algorithm version is 1
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:38  INFO output.FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:38  INFO datasources.SQLHadoopMapReduceCommitProtocol: Using user defined output committer class org.apache.parquet.hadoop.ParquetOutputCommitter
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:38  INFO output.FileOutputCommitter: File Output Committer Algorithm version is 1
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:38  INFO output.FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:38  INFO datasources.SQLHadoopMapReduceCommitProtocol: Using output committer class org.apache.parquet.hadoop.ParquetOutputCommitter
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:38  INFO codegen.CodeGenerator: Code generated in 26.571899 ms
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:38  INFO memory.MemoryStore: Block broadcast_0 stored as values in memory (estimated size 194.4 KiB, free 434.2 MiB)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:38  INFO memory.MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 34.8 KiB, free 434.2 MiB)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:38  INFO storage.BlockManagerInfo: Added broadcast_0_piece0 in memory on 192.168.206.185:38279 (size: 34.8 KiB, free: 434.4 MiB)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:38  INFO spark.SparkContext: Created broadcast 0 from sql at NativeMethodAccessorImpl.java:0
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:38  INFO execution.FileSourceScanExec: Planning scan with bin packing, max size: 4194304 bytes, open cost is considered as scanning 4194304 bytes.
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:38  INFO spark.SparkContext: Starting job: sql at NativeMethodAccessorImpl.java:0
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:38  INFO scheduler.DAGScheduler: Got job 0 (sql at NativeMethodAccessorImpl.java:0) with 1 output partitions
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:38  INFO scheduler.DAGScheduler: Final stage: ResultStage 0 (sql at NativeMethodAccessorImpl.java:0)
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:38  INFO scheduler.DAGScheduler: Parents of final stage: List()
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:38  INFO scheduler.DAGScheduler: Missing parents: List()
+[2022-01-30, 23:59:38 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:38  INFO scheduler.DAGScheduler: Submitting ResultStage 0 (MapPartitionsRDD[4] at sql at NativeMethodAccessorImpl.java:0), which has no missing parents
+[2022-01-30, 23:59:39 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:39  INFO memory.MemoryStore: Block broadcast_1 stored as values in memory (estimated size 227.6 KiB, free 434.0 MiB)
+[2022-01-30, 23:59:39 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:39  INFO memory.MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 81.9 KiB, free 433.9 MiB)
+[2022-01-30, 23:59:39 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:39  INFO storage.BlockManagerInfo: Added broadcast_1_piece0 in memory on 192.168.206.185:38279 (size: 81.9 KiB, free: 434.3 MiB)
+[2022-01-30, 23:59:39 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:39  INFO spark.SparkContext: Created broadcast 1 from broadcast at DAGScheduler.scala:1427
+[2022-01-30, 23:59:39 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:39  INFO scheduler.DAGScheduler: Submitting 1 missing tasks from ResultStage 0 (MapPartitionsRDD[4] at sql at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0))
+[2022-01-30, 23:59:39 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:39  INFO cluster.YarnScheduler: Adding task set 0.0 with 1 tasks resource profile 0
+[2022-01-30, 23:59:39 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:39  INFO scheduler.TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0) (harsh-virtual-machine, executor 2, partition 0, NODE_LOCAL, 4956 bytes) taskResourceAssignments Map()
+[2022-01-30, 23:59:39 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:39  INFO storage.BlockManagerInfo: Added broadcast_1_piece0 in memory on harsh-virtual-machine:38469 (size: 81.9 KiB, free: 434.3 MiB)
+[2022-01-30, 23:59:39 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:39  INFO storage.BlockManagerInfo: Added broadcast_0_piece0 in memory on harsh-virtual-machine:38469 (size: 34.8 KiB, free: 434.3 MiB)
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:41  INFO scheduler.TaskSetManager: Finished task 0.0 in stage 0.0 (TID 0) in 2141 ms on harsh-virtual-machine (executor 2) (1/1)
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:41  INFO cluster.YarnScheduler: Removed TaskSet 0.0, whose tasks have all completed, from pool
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:41  INFO scheduler.DAGScheduler: ResultStage 0 (sql at NativeMethodAccessorImpl.java:0) finished in 2.266 s
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:41  INFO scheduler.DAGScheduler: Job 0 is finished. Cancelling potential speculative or zombie tasks for this job
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:41  INFO cluster.YarnScheduler: Killing all running tasks in stage 0: Stage finished
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:41  INFO scheduler.DAGScheduler: Job 0 finished: sql at NativeMethodAccessorImpl.java:0, took 2.294071 s
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:41  INFO datasources.FileFormatWriter: Start to commit write Job 28f24b8f-65f4-424e-ae0f-7ac3829440df.
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:41  INFO datasources.FileFormatWriter: Write Job 28f24b8f-65f4-424e-ae0f-7ac3829440df committed. Elapsed time: 25 ms.
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:41  INFO datasources.FileFormatWriter: Finished processing stats for write job 28f24b8f-65f4-424e-ae0f-7ac3829440df.
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:41  INFO metastore.HiveMetaStore: 0: get_database: mini_project1
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:41  INFO HiveMetaStore.audit: ugi=harsh	ip=unknown-ip-addr	cmd=get_database: mini_project1
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:41  INFO metastore.HiveMetaStore: 0: get_database: mini_project1
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:41  INFO HiveMetaStore.audit: ugi=harsh	ip=unknown-ip-addr	cmd=get_database: mini_project1
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:41  INFO metastore.HiveMetaStore: 0: get_tables: db=mini_project1 pat=*
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:41  INFO HiveMetaStore.audit: ugi=harsh	ip=unknown-ip-addr	cmd=get_tables: db=mini_project1 pat=*
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:41  INFO codegen.CodeGenerator: Code generated in 6.280356 ms
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:41  INFO codegen.CodeGenerator: Code generated in 7.509776 ms
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:41  INFO spark.SparkContext: Starting job: showString at NativeMethodAccessorImpl.java:0
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:41  INFO scheduler.DAGScheduler: Got job 1 (showString at NativeMethodAccessorImpl.java:0) with 1 output partitions
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:41  INFO scheduler.DAGScheduler: Final stage: ResultStage 1 (showString at NativeMethodAccessorImpl.java:0)
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:41  INFO scheduler.DAGScheduler: Parents of final stage: List()
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:41  INFO scheduler.DAGScheduler: Missing parents: List()
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:41  INFO scheduler.DAGScheduler: Submitting ResultStage 1 (MapPartitionsRDD[7] at showString at NativeMethodAccessorImpl.java:0), which has no missing parents
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:41  INFO memory.MemoryStore: Block broadcast_2 stored as values in memory (estimated size 7.5 KiB, free 433.9 MiB)
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:41  INFO memory.MemoryStore: Block broadcast_2_piece0 stored as bytes in memory (estimated size 3.8 KiB, free 433.9 MiB)
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:41  INFO storage.BlockManagerInfo: Added broadcast_2_piece0 in memory on 192.168.206.185:38279 (size: 3.8 KiB, free: 434.3 MiB)
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:41  INFO spark.SparkContext: Created broadcast 2 from broadcast at DAGScheduler.scala:1427
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:41  INFO scheduler.DAGScheduler: Submitting 1 missing tasks from ResultStage 1 (MapPartitionsRDD[7] at showString at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0))
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:41  INFO cluster.YarnScheduler: Adding task set 1.0 with 1 tasks resource profile 0
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:41  INFO scheduler.TaskSetManager: Starting task 0.0 in stage 1.0 (TID 1) (harsh-virtual-machine, executor 2, partition 0, PROCESS_LOCAL, 4692 bytes) taskResourceAssignments Map()
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:41  INFO storage.BlockManagerInfo: Added broadcast_2_piece0 in memory on harsh-virtual-machine:38469 (size: 3.8 KiB, free: 434.3 MiB)
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:41  INFO scheduler.TaskSetManager: Finished task 0.0 in stage 1.0 (TID 1) in 81 ms on harsh-virtual-machine (executor 2) (1/1)
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:41  INFO cluster.YarnScheduler: Removed TaskSet 1.0, whose tasks have all completed, from pool
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:41  INFO scheduler.DAGScheduler: ResultStage 1 (showString at NativeMethodAccessorImpl.java:0) finished in 0.087 s
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:41  INFO scheduler.DAGScheduler: Job 1 is finished. Cancelling potential speculative or zombie tasks for this job
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:41  INFO cluster.YarnScheduler: Killing all running tasks in stage 1: Stage finished
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:41  INFO scheduler.DAGScheduler: Job 1 finished: showString at NativeMethodAccessorImpl.java:0, took 0.091141 s
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:41  INFO spark.SparkContext: Starting job: showString at NativeMethodAccessorImpl.java:0
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:41  INFO scheduler.DAGScheduler: Got job 2 (showString at NativeMethodAccessorImpl.java:0) with 1 output partitions
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:41  INFO scheduler.DAGScheduler: Final stage: ResultStage 2 (showString at NativeMethodAccessorImpl.java:0)
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:41  INFO scheduler.DAGScheduler: Parents of final stage: List()
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:41  INFO scheduler.DAGScheduler: Missing parents: List()
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:41  INFO scheduler.DAGScheduler: Submitting ResultStage 2 (MapPartitionsRDD[7] at showString at NativeMethodAccessorImpl.java:0), which has no missing parents
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:41  INFO memory.MemoryStore: Block broadcast_3 stored as values in memory (estimated size 7.5 KiB, free 433.9 MiB)
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:41  INFO memory.MemoryStore: Block broadcast_3_piece0 stored as bytes in memory (estimated size 3.8 KiB, free 433.9 MiB)
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:41  INFO storage.BlockManagerInfo: Added broadcast_3_piece0 in memory on 192.168.206.185:38279 (size: 3.8 KiB, free: 434.3 MiB)
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:41  INFO spark.SparkContext: Created broadcast 3 from broadcast at DAGScheduler.scala:1427
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:41  INFO scheduler.DAGScheduler: Submitting 1 missing tasks from ResultStage 2 (MapPartitionsRDD[7] at showString at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(1))
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:41  INFO cluster.YarnScheduler: Adding task set 2.0 with 1 tasks resource profile 0
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:41  INFO scheduler.TaskSetManager: Starting task 0.0 in stage 2.0 (TID 2) (harsh-virtual-machine, executor 2, partition 1, PROCESS_LOCAL, 4676 bytes) taskResourceAssignments Map()
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:41  INFO storage.BlockManagerInfo: Removed broadcast_2_piece0 on harsh-virtual-machine:38469 in memory (size: 3.8 KiB, free: 434.3 MiB)
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:41  INFO storage.BlockManagerInfo: Removed broadcast_2_piece0 on 192.168.206.185:38279 in memory (size: 3.8 KiB, free: 434.3 MiB)
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:41  INFO storage.BlockManagerInfo: Added broadcast_3_piece0 in memory on harsh-virtual-machine:38469 (size: 3.8 KiB, free: 434.3 MiB)
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:41  INFO scheduler.TaskSetManager: Finished task 0.0 in stage 2.0 (TID 2) in 60 ms on harsh-virtual-machine (executor 2) (1/1)
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:41  INFO cluster.YarnScheduler: Removed TaskSet 2.0, whose tasks have all completed, from pool
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:41  INFO scheduler.DAGScheduler: ResultStage 2 (showString at NativeMethodAccessorImpl.java:0) finished in 0.076 s
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:41  INFO scheduler.DAGScheduler: Job 2 is finished. Cancelling potential speculative or zombie tasks for this job
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:41  INFO cluster.YarnScheduler: Killing all running tasks in stage 2: Stage finished
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:41  INFO scheduler.DAGScheduler: Job 2 finished: showString at NativeMethodAccessorImpl.java:0, took 0.079131 s
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:41  INFO storage.BlockManagerInfo: Removed broadcast_1_piece0 on 192.168.206.185:38279 in memory (size: 81.9 KiB, free: 434.4 MiB)
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:41  INFO storage.BlockManagerInfo: Removed broadcast_1_piece0 on harsh-virtual-machine:38469 in memory (size: 81.9 KiB, free: 434.4 MiB)
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:41  INFO codegen.CodeGenerator: Code generated in 7.446668 ms
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - +-------------+------------------+-----------+
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - |    namespace|         tableName|isTemporary|
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - +-------------+------------------+-----------+
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - |mini_project1|cancer_partitioned|      false|
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - |mini_project1|          staging1|      false|
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - +-------------+------------------+-----------+
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:41  INFO metastore.HiveMetaStore: 0: create_database: Database(name:report, description:, locationUri:hdfs://localhost:9000/user/hive/warehouse/report.db, parameters:{}, ownerName:harsh)
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:41  INFO HiveMetaStore.audit: ugi=harsh	ip=unknown-ip-addr	cmd=create_database: Database(name:report, description:, locationUri:hdfs://localhost:9000/user/hive/warehouse/report.db, parameters:{}, ownerName:harsh)
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:41  ERROR metastore.RetryingHMSHandler: AlreadyExistsException(message:Database report already exists)
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 	at org.apache.hadoop.hive.metastore.HiveMetaStore$HMSHandler.create_database(HiveMetaStore.java:925)
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 	at org.apache.hadoop.hive.metastore.RetryingHMSHandler.invokeInternal(RetryingHMSHandler.java:148)
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 	at org.apache.hadoop.hive.metastore.RetryingHMSHandler.invoke(RetryingHMSHandler.java:107)
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 	at com.sun.proxy.$Proxy29.create_database(Unknown Source)
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 	at org.apache.hadoop.hive.metastore.HiveMetaStoreClient.createDatabase(HiveMetaStoreClient.java:725)
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 	at org.apache.hadoop.hive.metastore.RetryingMetaStoreClient.invoke(RetryingMetaStoreClient.java:173)
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 	at com.sun.proxy.$Proxy30.createDatabase(Unknown Source)
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 	at org.apache.hadoop.hive.ql.metadata.Hive.createDatabase(Hive.java:434)
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.hive.client.HiveClientImpl.$anonfun$createDatabase$1(HiveClientImpl.scala:345)
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.hive.client.HiveClientImpl.$anonfun$withHiveState$1(HiveClientImpl.scala:303)
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.hive.client.HiveClientImpl.liftedTree1$1(HiveClientImpl.scala:234)
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.hive.client.HiveClientImpl.retryLocked(HiveClientImpl.scala:233)
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.hive.client.HiveClientImpl.withHiveState(HiveClientImpl.scala:283)
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.hive.client.HiveClientImpl.createDatabase(HiveClientImpl.scala:343)
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.hive.HiveExternalCatalog.$anonfun$createDatabase$1(HiveExternalCatalog.scala:193)
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.hive.HiveExternalCatalog.withClient(HiveExternalCatalog.scala:102)
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.hive.HiveExternalCatalog.createDatabase(HiveExternalCatalog.scala:193)
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.catalyst.catalog.ExternalCatalogWithListener.createDatabase(ExternalCatalogWithListener.scala:47)
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.catalyst.catalog.SessionCatalog.createDatabase(SessionCatalog.scala:251)
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.execution.command.CreateDatabaseCommand.run(ddl.scala:83)
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.execution.command.ExecutedCommandExec.sideEffectResult$lzycompute(commands.scala:75)
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.execution.command.ExecutedCommandExec.sideEffectResult(commands.scala:73)
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.execution.command.ExecutedCommandExec.executeCollect(commands.scala:84)
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.execution.QueryExecution$$anonfun$eagerlyExecuteCommands$1.$anonfun$applyOrElse$1(QueryExecution.scala:110)
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$5(SQLExecution.scala:103)
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.execution.SQLExecution$.withSQLConfPropagated(SQLExecution.scala:163)
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$1(SQLExecution.scala:90)
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:775)
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.execution.SQLExecution$.withNewExecutionId(SQLExecution.scala:64)
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.execution.QueryExecution$$anonfun$eagerlyExecuteCommands$1.applyOrElse(QueryExecution.scala:110)
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.execution.QueryExecution$$anonfun$eagerlyExecuteCommands$1.applyOrElse(QueryExecution.scala:106)
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.catalyst.trees.TreeNode.$anonfun$transformDownWithPruning$1(TreeNode.scala:481)
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.catalyst.trees.CurrentOrigin$.withOrigin(TreeNode.scala:82)
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.catalyst.trees.TreeNode.transformDownWithPruning(TreeNode.scala:481)
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.org$apache$spark$sql$catalyst$plans$logical$AnalysisHelper$$super$transformDownWithPruning(LogicalPlan.scala:30)
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper.transformDownWithPruning(AnalysisHelper.scala:267)
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper.transformDownWithPruning$(AnalysisHelper.scala:263)
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.transformDownWithPruning(LogicalPlan.scala:30)
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.transformDownWithPruning(LogicalPlan.scala:30)
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.catalyst.trees.TreeNode.transformDown(TreeNode.scala:457)
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.execution.QueryExecution.eagerlyExecuteCommands(QueryExecution.scala:106)
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.execution.QueryExecution.commandExecuted$lzycompute(QueryExecution.scala:93)
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.execution.QueryExecution.commandExecuted(QueryExecution.scala:91)
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.Dataset.<init>(Dataset.scala:219)
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.Dataset$.$anonfun$ofRows$2(Dataset.scala:99)
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:775)
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.Dataset$.ofRows(Dataset.scala:96)
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.SparkSession.$anonfun$sql$1(SparkSession.scala:618)
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:775)
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 	at org.apache.spark.sql.SparkSession.sql(SparkSession.scala:613)
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:357)
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 	at py4j.Gateway.invoke(Gateway.java:282)
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 	at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 	at py4j.commands.CallCommand.execute(CallCommand.java:79)
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 	at py4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:182)
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 	at py4j.ClientServerConnection.run(ClientServerConnection.java:106)
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 	at java.base/java.lang.Thread.run(Thread.java:829)
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:41  INFO metastore.HiveMetaStore: 0: get_database: report
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:41  INFO HiveMetaStore.audit: ugi=harsh	ip=unknown-ip-addr	cmd=get_database: report
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:41  INFO metastore.HiveMetaStore: 0: get_database: mini_project1
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:41  INFO HiveMetaStore.audit: ugi=harsh	ip=unknown-ip-addr	cmd=get_database: mini_project1
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:41  INFO metastore.HiveMetaStore: 0: get_table : db=mini_project1 tbl=cancer_partitioned
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:41  INFO HiveMetaStore.audit: ugi=harsh	ip=unknown-ip-addr	cmd=get_table : db=mini_project1 tbl=cancer_partitioned
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:41  INFO metastore.HiveMetaStore: 0: get_table : db=mini_project1 tbl=cancer_partitioned
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:41  INFO HiveMetaStore.audit: ugi=harsh	ip=unknown-ip-addr	cmd=get_table : db=mini_project1 tbl=cancer_partitioned
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:41  WARN analysis.ResolveSessionCatalog: A Hive serde table will be created as there is no table provider specified. You can set spark.sql.legacy.createHiveTableByDefault to false so that native data source table will be created instead.
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:41  INFO metastore.HiveMetaStore: 0: get_database: mini_project1
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:41  INFO HiveMetaStore.audit: ugi=harsh	ip=unknown-ip-addr	cmd=get_database: mini_project1
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:41  INFO metastore.HiveMetaStore: 0: get_table : db=mini_project1 tbl=cancer_partitioned
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:41  INFO HiveMetaStore.audit: ugi=harsh	ip=unknown-ip-addr	cmd=get_table : db=mini_project1 tbl=cancer_partitioned
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:41  INFO metastore.HiveMetaStore: 0: get_table : db=mini_project1 tbl=cancer_partitioned
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:41  INFO HiveMetaStore.audit: ugi=harsh	ip=unknown-ip-addr	cmd=get_table : db=mini_project1 tbl=cancer_partitioned
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:41  INFO metastore.HiveMetaStore: 0: get_config_value: name=hive.metastore.try.direct.sql defaultValue=true
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:41  INFO HiveMetaStore.audit: ugi=harsh	ip=unknown-ip-addr	cmd=get_config_value: name=hive.metastore.try.direct.sql defaultValue=true
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:41  INFO metastore.HiveMetaStore: 0: get_partitions_by_filter : db=mini_project1 tbl=cancer_partitioned
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:41  INFO HiveMetaStore.audit: ugi=harsh	ip=unknown-ip-addr	cmd=get_partitions_by_filter : db=mini_project1 tbl=cancer_partitioned
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:41  INFO datasources.InMemoryFileIndex: It took 2 ms to list leaf files for 1 paths.
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:41  INFO datasources.DataSourceStrategy: Pruning directories with: isnotnull(Class#91),(Class#91 = Malignant)
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:41  INFO datasources.FileSourceStrategy: Pushed Filters:
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:41  INFO datasources.FileSourceStrategy: Post-Scan Filters:
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:41  INFO datasources.FileSourceStrategy: Output Data Schema: struct<>
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:41  INFO metastore.HiveMetaStore: 0: get_table : db=report tbl=malignant_count
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:41  INFO HiveMetaStore.audit: ugi=harsh	ip=unknown-ip-addr	cmd=get_table : db=report tbl=malignant_count
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:41  INFO metastore.HiveMetaStore: 0: get_database: mini_project1
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:41  INFO HiveMetaStore.audit: ugi=harsh	ip=unknown-ip-addr	cmd=get_database: mini_project1
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:41  INFO metastore.HiveMetaStore: 0: get_table : db=mini_project1 tbl=cancer_partitioned
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:41  INFO HiveMetaStore.audit: ugi=harsh	ip=unknown-ip-addr	cmd=get_table : db=mini_project1 tbl=cancer_partitioned
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:41  INFO metastore.HiveMetaStore: 0: get_table : db=mini_project1 tbl=cancer_partitioned
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:41  INFO HiveMetaStore.audit: ugi=harsh	ip=unknown-ip-addr	cmd=get_table : db=mini_project1 tbl=cancer_partitioned
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:41  WARN analysis.ResolveSessionCatalog: A Hive serde table will be created as there is no table provider specified. You can set spark.sql.legacy.createHiveTableByDefault to false so that native data source table will be created instead.
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:41  INFO metastore.HiveMetaStore: 0: get_database: mini_project1
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:41  INFO HiveMetaStore.audit: ugi=harsh	ip=unknown-ip-addr	cmd=get_database: mini_project1
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:41  INFO metastore.HiveMetaStore: 0: get_table : db=mini_project1 tbl=cancer_partitioned
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:41  INFO HiveMetaStore.audit: ugi=harsh	ip=unknown-ip-addr	cmd=get_table : db=mini_project1 tbl=cancer_partitioned
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:41  INFO metastore.HiveMetaStore: 0: get_table : db=mini_project1 tbl=cancer_partitioned
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:41  INFO HiveMetaStore.audit: ugi=harsh	ip=unknown-ip-addr	cmd=get_table : db=mini_project1 tbl=cancer_partitioned
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:41  INFO metastore.HiveMetaStore: 0: get_config_value: name=hive.metastore.try.direct.sql defaultValue=true
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:41  INFO HiveMetaStore.audit: ugi=harsh	ip=unknown-ip-addr	cmd=get_config_value: name=hive.metastore.try.direct.sql defaultValue=true
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:41  INFO metastore.HiveMetaStore: 0: get_partitions_by_filter : db=mini_project1 tbl=cancer_partitioned
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:41  INFO HiveMetaStore.audit: ugi=harsh	ip=unknown-ip-addr	cmd=get_partitions_by_filter : db=mini_project1 tbl=cancer_partitioned
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:41  INFO datasources.InMemoryFileIndex: It took 2 ms to list leaf files for 1 paths.
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:41  INFO datasources.DataSourceStrategy: Pruning directories with: isnotnull(Class#115),(Class#115 = Benign)
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:41  INFO datasources.FileSourceStrategy: Pushed Filters:
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:41  INFO datasources.FileSourceStrategy: Post-Scan Filters:
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:41  INFO datasources.FileSourceStrategy: Output Data Schema: struct<>
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:41  INFO metastore.HiveMetaStore: 0: get_table : db=report tbl=benign_count1
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:41  INFO HiveMetaStore.audit: ugi=harsh	ip=unknown-ip-addr	cmd=get_table : db=report tbl=benign_count1
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:41  INFO metastore.HiveMetaStore: 0: get_database: report
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:41  INFO HiveMetaStore.audit: ugi=harsh	ip=unknown-ip-addr	cmd=get_database: report
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:41  INFO metastore.HiveMetaStore: 0: get_table : db=report tbl=benign_count1
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:41  INFO HiveMetaStore.audit: ugi=harsh	ip=unknown-ip-addr	cmd=get_table : db=report tbl=benign_count1
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:41  INFO metastore.HiveMetaStore: 0: get_table : db=report tbl=benign_count1
+[2022-01-30, 23:59:41 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:41  INFO HiveMetaStore.audit: ugi=harsh	ip=unknown-ip-addr	cmd=get_table : db=report tbl=benign_count1
+[2022-01-30, 23:59:42 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:42  INFO codegen.CodeGenerator: Code generated in 6.499186 ms
+[2022-01-30, 23:59:42 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:42  INFO memory.MemoryStore: Block broadcast_4 stored as values in memory (estimated size 192.3 KiB, free 434.0 MiB)
+[2022-01-30, 23:59:42 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:42  INFO storage.BlockManagerInfo: Removed broadcast_3_piece0 on 192.168.206.185:38279 in memory (size: 3.8 KiB, free: 434.4 MiB)
+[2022-01-30, 23:59:42 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:42  INFO storage.BlockManagerInfo: Removed broadcast_3_piece0 on harsh-virtual-machine:38469 in memory (size: 3.8 KiB, free: 434.4 MiB)
+[2022-01-30, 23:59:42 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:42  INFO memory.MemoryStore: Block broadcast_4_piece0 stored as bytes in memory (estimated size 33.8 KiB, free 433.9 MiB)
+[2022-01-30, 23:59:42 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:42  INFO storage.BlockManagerInfo: Added broadcast_4_piece0 in memory on 192.168.206.185:38279 (size: 33.8 KiB, free: 434.3 MiB)
+[2022-01-30, 23:59:42 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:42  INFO spark.SparkContext: Created broadcast 4 from
+[2022-01-30, 23:59:42 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:42  INFO mapred.FileInputFormat: Total input files to process : 1
+[2022-01-30, 23:59:42 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:42  INFO spark.SparkContext: Starting job: showString at NativeMethodAccessorImpl.java:0
+[2022-01-30, 23:59:42 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:42  INFO scheduler.DAGScheduler: Got job 3 (showString at NativeMethodAccessorImpl.java:0) with 1 output partitions
+[2022-01-30, 23:59:42 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:42  INFO scheduler.DAGScheduler: Final stage: ResultStage 3 (showString at NativeMethodAccessorImpl.java:0)
+[2022-01-30, 23:59:42 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:42  INFO scheduler.DAGScheduler: Parents of final stage: List()
+[2022-01-30, 23:59:42 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:42  INFO scheduler.DAGScheduler: Missing parents: List()
+[2022-01-30, 23:59:42 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:42  INFO scheduler.DAGScheduler: Submitting ResultStage 3 (MapPartitionsRDD[13] at showString at NativeMethodAccessorImpl.java:0), which has no missing parents
+[2022-01-30, 23:59:42 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:42  INFO memory.MemoryStore: Block broadcast_5 stored as values in memory (estimated size 13.3 KiB, free 433.9 MiB)
+[2022-01-30, 23:59:42 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:42  INFO memory.MemoryStore: Block broadcast_5_piece0 stored as bytes in memory (estimated size 6.6 KiB, free 433.9 MiB)
+[2022-01-30, 23:59:42 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:42  INFO storage.BlockManagerInfo: Added broadcast_5_piece0 in memory on 192.168.206.185:38279 (size: 6.6 KiB, free: 434.3 MiB)
+[2022-01-30, 23:59:42 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:42  INFO spark.SparkContext: Created broadcast 5 from broadcast at DAGScheduler.scala:1427
+[2022-01-30, 23:59:42 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:42  INFO scheduler.DAGScheduler: Submitting 1 missing tasks from ResultStage 3 (MapPartitionsRDD[13] at showString at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0))
+[2022-01-30, 23:59:42 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:42  INFO cluster.YarnScheduler: Adding task set 3.0 with 1 tasks resource profile 0
+[2022-01-30, 23:59:42 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:42  INFO scheduler.TaskSetManager: Starting task 0.0 in stage 3.0 (TID 3) (harsh-virtual-machine, executor 1, partition 0, NODE_LOCAL, 4598 bytes) taskResourceAssignments Map()
+[2022-01-30, 23:59:42 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:42  INFO storage.BlockManagerInfo: Removed broadcast_0_piece0 on harsh-virtual-machine:38469 in memory (size: 34.8 KiB, free: 434.4 MiB)
+[2022-01-30, 23:59:42 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:42  INFO storage.BlockManagerInfo: Removed broadcast_0_piece0 on 192.168.206.185:38279 in memory (size: 34.8 KiB, free: 434.4 MiB)
+[2022-01-30, 23:59:42 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:42  INFO storage.BlockManagerInfo: Added broadcast_5_piece0 in memory on harsh-virtual-machine:35681 (size: 6.6 KiB, free: 434.4 MiB)
+[2022-01-30, 23:59:42 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:42  INFO storage.BlockManagerInfo: Added broadcast_4_piece0 in memory on harsh-virtual-machine:35681 (size: 33.8 KiB, free: 434.4 MiB)
+[2022-01-30, 23:59:43 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:43  INFO scheduler.TaskSetManager: Finished task 0.0 in stage 3.0 (TID 3) in 1351 ms on harsh-virtual-machine (executor 1) (1/1)
+[2022-01-30, 23:59:43 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:43  INFO cluster.YarnScheduler: Removed TaskSet 3.0, whose tasks have all completed, from pool
+[2022-01-30, 23:59:43 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:43  INFO scheduler.DAGScheduler: ResultStage 3 (showString at NativeMethodAccessorImpl.java:0) finished in 1.369 s
+[2022-01-30, 23:59:43 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:43  INFO scheduler.DAGScheduler: Job 3 is finished. Cancelling potential speculative or zombie tasks for this job
+[2022-01-30, 23:59:43 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:43  INFO cluster.YarnScheduler: Killing all running tasks in stage 3: Stage finished
+[2022-01-30, 23:59:43 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:43  INFO scheduler.DAGScheduler: Job 3 finished: showString at NativeMethodAccessorImpl.java:0, took 1.373103 s
+[2022-01-30, 23:59:43 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:43  INFO spark.SparkContext: Starting job: showString at NativeMethodAccessorImpl.java:0
+[2022-01-30, 23:59:43 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:43  INFO scheduler.DAGScheduler: Got job 4 (showString at NativeMethodAccessorImpl.java:0) with 1 output partitions
+[2022-01-30, 23:59:43 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:43  INFO scheduler.DAGScheduler: Final stage: ResultStage 4 (showString at NativeMethodAccessorImpl.java:0)
+[2022-01-30, 23:59:43 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:43  INFO scheduler.DAGScheduler: Parents of final stage: List()
+[2022-01-30, 23:59:43 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:43  INFO scheduler.DAGScheduler: Missing parents: List()
+[2022-01-30, 23:59:43 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:43  INFO scheduler.DAGScheduler: Submitting ResultStage 4 (MapPartitionsRDD[13] at showString at NativeMethodAccessorImpl.java:0), which has no missing parents
+[2022-01-30, 23:59:43 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:43  INFO memory.MemoryStore: Block broadcast_6 stored as values in memory (estimated size 13.3 KiB, free 434.1 MiB)
+[2022-01-30, 23:59:43 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:43  INFO memory.MemoryStore: Block broadcast_6_piece0 stored as bytes in memory (estimated size 6.6 KiB, free 434.1 MiB)
+[2022-01-30, 23:59:43 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:43  INFO storage.BlockManagerInfo: Added broadcast_6_piece0 in memory on 192.168.206.185:38279 (size: 6.6 KiB, free: 434.4 MiB)
+[2022-01-30, 23:59:43 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:43  INFO spark.SparkContext: Created broadcast 6 from broadcast at DAGScheduler.scala:1427
+[2022-01-30, 23:59:43 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:43  INFO scheduler.DAGScheduler: Submitting 1 missing tasks from ResultStage 4 (MapPartitionsRDD[13] at showString at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(1))
+[2022-01-30, 23:59:43 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:43  INFO cluster.YarnScheduler: Adding task set 4.0 with 1 tasks resource profile 0
+[2022-01-30, 23:59:43 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:43  INFO scheduler.TaskSetManager: Starting task 0.0 in stage 4.0 (TID 4) (harsh-virtual-machine, executor 1, partition 1, NODE_LOCAL, 4598 bytes) taskResourceAssignments Map()
+[2022-01-30, 23:59:43 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:43  INFO storage.BlockManagerInfo: Removed broadcast_5_piece0 on 192.168.206.185:38279 in memory (size: 6.6 KiB, free: 434.4 MiB)
+[2022-01-30, 23:59:43 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:43  INFO storage.BlockManagerInfo: Removed broadcast_5_piece0 on harsh-virtual-machine:35681 in memory (size: 6.6 KiB, free: 434.4 MiB)
+[2022-01-30, 23:59:43 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:43  INFO storage.BlockManagerInfo: Added broadcast_6_piece0 in memory on harsh-virtual-machine:35681 (size: 6.6 KiB, free: 434.4 MiB)
+[2022-01-30, 23:59:43 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:43  INFO scheduler.TaskSetManager: Finished task 0.0 in stage 4.0 (TID 4) in 66 ms on harsh-virtual-machine (executor 1) (1/1)
+[2022-01-30, 23:59:43 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:43  INFO cluster.YarnScheduler: Removed TaskSet 4.0, whose tasks have all completed, from pool
+[2022-01-30, 23:59:43 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:43  INFO scheduler.DAGScheduler: ResultStage 4 (showString at NativeMethodAccessorImpl.java:0) finished in 0.083 s
+[2022-01-30, 23:59:43 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:43  INFO scheduler.DAGScheduler: Job 4 is finished. Cancelling potential speculative or zombie tasks for this job
+[2022-01-30, 23:59:43 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:43  INFO cluster.YarnScheduler: Killing all running tasks in stage 4: Stage finished
+[2022-01-30, 23:59:43 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:43  INFO scheduler.DAGScheduler: Job 4 finished: showString at NativeMethodAccessorImpl.java:0, took 0.085854 s
+[2022-01-30, 23:59:43 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:43  INFO codegen.CodeGenerator: Code generated in 5.665957 ms
+[2022-01-30, 23:59:43 ] {subprocess.py:89} INFO - +--------+
+[2022-01-30, 23:59:43 ] {subprocess.py:89} INFO - |count(1)|
+[2022-01-30, 23:59:43 ] {subprocess.py:89} INFO - +--------+
+[2022-01-30, 23:59:43 ] {subprocess.py:89} INFO - |     458|
+[2022-01-30, 23:59:43 ] {subprocess.py:89} INFO - +--------+
+[2022-01-30, 23:59:43 ] {subprocess.py:89} INFO - 
+[2022-01-30, 23:59:43 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:43  INFO metastore.HiveMetaStore: 0: get_database: report
+[2022-01-30, 23:59:43 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:43  INFO HiveMetaStore.audit: ugi=harsh	ip=unknown-ip-addr	cmd=get_database: report
+[2022-01-30, 23:59:43 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:43  INFO metastore.HiveMetaStore: 0: get_table : db=report tbl=malignant_count
+[2022-01-30, 23:59:43 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:43  INFO HiveMetaStore.audit: ugi=harsh	ip=unknown-ip-addr	cmd=get_table : db=report tbl=malignant_count
+[2022-01-30, 23:59:43 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:43  INFO metastore.HiveMetaStore: 0: get_table : db=report tbl=malignant_count
+[2022-01-30, 23:59:43 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:43  INFO HiveMetaStore.audit: ugi=harsh	ip=unknown-ip-addr	cmd=get_table : db=report tbl=malignant_count
+[2022-01-30, 23:59:43 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:43  INFO memory.MemoryStore: Block broadcast_7 stored as values in memory (estimated size 192.3 KiB, free 434.0 MiB)
+[2022-01-30, 23:59:43 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:43  INFO memory.MemoryStore: Block broadcast_7_piece0 stored as bytes in memory (estimated size 33.8 KiB, free 433.9 MiB)
+[2022-01-30, 23:59:43 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:43  INFO storage.BlockManagerInfo: Added broadcast_7_piece0 in memory on 192.168.206.185:38279 (size: 33.8 KiB, free: 434.3 MiB)
+[2022-01-30, 23:59:43 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:43  INFO spark.SparkContext: Created broadcast 7 from
+[2022-01-30, 23:59:43 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:43  INFO storage.BlockManagerInfo: Removed broadcast_6_piece0 on 192.168.206.185:38279 in memory (size: 6.6 KiB, free: 434.3 MiB)
+[2022-01-30, 23:59:43 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:43  INFO storage.BlockManagerInfo: Removed broadcast_6_piece0 on harsh-virtual-machine:35681 in memory (size: 6.6 KiB, free: 434.4 MiB)
+[2022-01-30, 23:59:43 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:43  INFO mapred.FileInputFormat: Total input files to process : 1
+[2022-01-30, 23:59:43 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:43  INFO storage.BlockManagerInfo: Removed broadcast_4_piece0 on 192.168.206.185:38279 in memory (size: 33.8 KiB, free: 434.4 MiB)
+[2022-01-30, 23:59:43 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:43  INFO spark.SparkContext: Starting job: showString at NativeMethodAccessorImpl.java:0
+[2022-01-30, 23:59:43 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:43  INFO storage.BlockManagerInfo: Removed broadcast_4_piece0 on harsh-virtual-machine:35681 in memory (size: 33.8 KiB, free: 434.4 MiB)
+[2022-01-30, 23:59:43 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:43  INFO scheduler.DAGScheduler: Got job 5 (showString at NativeMethodAccessorImpl.java:0) with 1 output partitions
+[2022-01-30, 23:59:43 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:43  INFO scheduler.DAGScheduler: Final stage: ResultStage 5 (showString at NativeMethodAccessorImpl.java:0)
+[2022-01-30, 23:59:43 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:43  INFO scheduler.DAGScheduler: Parents of final stage: List()
+[2022-01-30, 23:59:43 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:43  INFO scheduler.DAGScheduler: Missing parents: List()
+[2022-01-30, 23:59:43 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:43  INFO scheduler.DAGScheduler: Submitting ResultStage 5 (MapPartitionsRDD[19] at showString at NativeMethodAccessorImpl.java:0), which has no missing parents
+[2022-01-30, 23:59:43 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:43  INFO memory.MemoryStore: Block broadcast_8 stored as values in memory (estimated size 13.3 KiB, free 434.2 MiB)
+[2022-01-30, 23:59:43 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:43  INFO memory.MemoryStore: Block broadcast_8_piece0 stored as bytes in memory (estimated size 6.6 KiB, free 434.2 MiB)
+[2022-01-30, 23:59:43 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:43  INFO storage.BlockManagerInfo: Added broadcast_8_piece0 in memory on 192.168.206.185:38279 (size: 6.6 KiB, free: 434.4 MiB)
+[2022-01-30, 23:59:43 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:43  INFO spark.SparkContext: Created broadcast 8 from broadcast at DAGScheduler.scala:1427
+[2022-01-30, 23:59:43 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:43  INFO scheduler.DAGScheduler: Submitting 1 missing tasks from ResultStage 5 (MapPartitionsRDD[19] at showString at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0))
+[2022-01-30, 23:59:43 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:43  INFO cluster.YarnScheduler: Adding task set 5.0 with 1 tasks resource profile 0
+[2022-01-30, 23:59:43 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:43  INFO scheduler.TaskSetManager: Starting task 0.0 in stage 5.0 (TID 5) (harsh-virtual-machine, executor 1, partition 0, NODE_LOCAL, 4600 bytes) taskResourceAssignments Map()
+[2022-01-30, 23:59:43 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:43  INFO storage.BlockManagerInfo: Added broadcast_8_piece0 in memory on harsh-virtual-machine:35681 (size: 6.6 KiB, free: 434.4 MiB)
+[2022-01-30, 23:59:43 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:43  INFO storage.BlockManagerInfo: Added broadcast_7_piece0 in memory on harsh-virtual-machine:35681 (size: 33.8 KiB, free: 434.4 MiB)
+[2022-01-30, 23:59:43 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:43  INFO scheduler.TaskSetManager: Finished task 0.0 in stage 5.0 (TID 5) in 62 ms on harsh-virtual-machine (executor 1) (1/1)
+[2022-01-30, 23:59:43 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:43  INFO cluster.YarnScheduler: Removed TaskSet 5.0, whose tasks have all completed, from pool
+[2022-01-30, 23:59:43 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:43  INFO scheduler.DAGScheduler: ResultStage 5 (showString at NativeMethodAccessorImpl.java:0) finished in 0.075 s
+[2022-01-30, 23:59:43 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:43  INFO scheduler.DAGScheduler: Job 5 is finished. Cancelling potential speculative or zombie tasks for this job
+[2022-01-30, 23:59:43 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:43  INFO cluster.YarnScheduler: Killing all running tasks in stage 5: Stage finished
+[2022-01-30, 23:59:43 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:43  INFO scheduler.DAGScheduler: Job 5 finished: showString at NativeMethodAccessorImpl.java:0, took 0.077423 s
+[2022-01-30, 23:59:43 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:43  INFO spark.SparkContext: Starting job: showString at NativeMethodAccessorImpl.java:0
+[2022-01-30, 23:59:43 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:43  INFO scheduler.DAGScheduler: Got job 6 (showString at NativeMethodAccessorImpl.java:0) with 1 output partitions
+[2022-01-30, 23:59:43 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:43  INFO scheduler.DAGScheduler: Final stage: ResultStage 6 (showString at NativeMethodAccessorImpl.java:0)
+[2022-01-30, 23:59:43 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:43  INFO scheduler.DAGScheduler: Parents of final stage: List()
+[2022-01-30, 23:59:43 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:43  INFO scheduler.DAGScheduler: Missing parents: List()
+[2022-01-30, 23:59:43 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:43  INFO scheduler.DAGScheduler: Submitting ResultStage 6 (MapPartitionsRDD[19] at showString at NativeMethodAccessorImpl.java:0), which has no missing parents
+[2022-01-30, 23:59:43 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:43  INFO memory.MemoryStore: Block broadcast_9 stored as values in memory (estimated size 13.3 KiB, free 434.1 MiB)
+[2022-01-30, 23:59:43 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:43  INFO memory.MemoryStore: Block broadcast_9_piece0 stored as bytes in memory (estimated size 6.6 KiB, free 434.1 MiB)
+[2022-01-30, 23:59:43 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:43  INFO storage.BlockManagerInfo: Added broadcast_9_piece0 in memory on 192.168.206.185:38279 (size: 6.6 KiB, free: 434.4 MiB)
+[2022-01-30, 23:59:43 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:43  INFO spark.SparkContext: Created broadcast 9 from broadcast at DAGScheduler.scala:1427
+[2022-01-30, 23:59:43 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:43  INFO scheduler.DAGScheduler: Submitting 1 missing tasks from ResultStage 6 (MapPartitionsRDD[19] at showString at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(1))
+[2022-01-30, 23:59:43 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:43  INFO cluster.YarnScheduler: Adding task set 6.0 with 1 tasks resource profile 0
+[2022-01-30, 23:59:43 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:43  INFO storage.BlockManagerInfo: Removed broadcast_8_piece0 on 192.168.206.185:38279 in memory (size: 6.6 KiB, free: 434.4 MiB)
+[2022-01-30, 23:59:43 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:43  INFO scheduler.TaskSetManager: Starting task 0.0 in stage 6.0 (TID 6) (harsh-virtual-machine, executor 1, partition 1, NODE_LOCAL, 4600 bytes) taskResourceAssignments Map()
+[2022-01-30, 23:59:43 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:43  INFO storage.BlockManagerInfo: Removed broadcast_8_piece0 on harsh-virtual-machine:35681 in memory (size: 6.6 KiB, free: 434.4 MiB)
+[2022-01-30, 23:59:43 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:43  INFO storage.BlockManagerInfo: Added broadcast_9_piece0 in memory on harsh-virtual-machine:35681 (size: 6.6 KiB, free: 434.4 MiB)
+[2022-01-30, 23:59:43 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:43  INFO scheduler.TaskSetManager: Finished task 0.0 in stage 6.0 (TID 6) in 42 ms on harsh-virtual-machine (executor 1) (1/1)
+[2022-01-30, 23:59:43 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:43  INFO cluster.YarnScheduler: Removed TaskSet 6.0, whose tasks have all completed, from pool
+[2022-01-30, 23:59:43 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:43  INFO scheduler.DAGScheduler: ResultStage 6 (showString at NativeMethodAccessorImpl.java:0) finished in 0.054 s
+[2022-01-30, 23:59:43 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:43  INFO scheduler.DAGScheduler: Job 6 is finished. Cancelling potential speculative or zombie tasks for this job
+[2022-01-30, 23:59:43 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:43  INFO cluster.YarnScheduler: Killing all running tasks in stage 6: Stage finished
+[2022-01-30, 23:59:43 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:43  INFO scheduler.DAGScheduler: Job 6 finished: showString at NativeMethodAccessorImpl.java:0, took 0.056764 s
+[2022-01-30, 23:59:43 ] {subprocess.py:89} INFO - +--------+
+[2022-01-30, 23:59:43 ] {subprocess.py:89} INFO - |count(1)|
+[2022-01-30, 23:59:43 ] {subprocess.py:89} INFO - +--------+
+[2022-01-30, 23:59:43 ] {subprocess.py:89} INFO - |     241|
+[2022-01-30, 23:59:43 ] {subprocess.py:89} INFO - +--------+
+[2022-01-30, 23:59:43 ] {subprocess.py:89} INFO - 
+[2022-01-30, 23:59:43 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:43  INFO spark.SparkContext: Invoking stop() from shutdown hook
+[2022-01-30, 23:59:43 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:43  INFO server.AbstractConnector: Stopped Spark@68a05ed2{HTTP/1.1, (http/1.1)}{0.0.0.0:4040}
+[2022-01-30, 23:59:43 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:43  INFO ui.SparkUI: Stopped Spark web UI at http://192.168.206.185:4040
+[2022-01-30, 23:59:43 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:43  INFO cluster.YarnClientSchedulerBackend: Interrupting monitor thread
+[2022-01-30, 23:59:43 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:43  INFO cluster.YarnClientSchedulerBackend: Shutting down all executors
+[2022-01-30, 23:59:43 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:43  INFO cluster.YarnSchedulerBackend$YarnDriverEndpoint: Asking each executor to shut down
+[2022-01-30, 23:59:43 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:43  INFO cluster.YarnClientSchedulerBackend: YARN client scheduler backend Stopped
+[2022-01-30, 23:59:43 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:43  INFO spark.MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+[2022-01-30, 23:59:43 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:43  INFO memory.MemoryStore: MemoryStore cleared
+[2022-01-30, 23:59:43 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:43  INFO storage.BlockManager: BlockManager stopped
+[2022-01-30, 23:59:43 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:43  INFO storage.BlockManagerMaster: BlockManagerMaster stopped
+[2022-01-30, 23:59:43 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:43  INFO scheduler.OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+[2022-01-30, 23:59:44 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:44  INFO spark.SparkContext: Successfully stopped SparkContext
+[2022-01-30, 23:59:44 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:44  INFO util.ShutdownHookManager: Shutdown hook called
+[2022-01-30, 23:59:44 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:44  INFO util.ShutdownHookManager: Deleting directory /tmp/spark-0bf1a34a-d524-4059-a8cb-1739a52c3eee
+[2022-01-30, 23:59:44 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:44  INFO util.ShutdownHookManager: Deleting directory /tmp/spark-0bf1a34a-d524-4059-a8cb-1739a52c3eee/pyspark-1d8e0217-95f7-4933-bc9e-2bc2299e09db
+[2022-01-30, 23:59:44 ] {subprocess.py:89} INFO - 2022-01-30, 23:59:44  INFO util.ShutdownHookManager: Deleting directory /tmp/spark-3464c096-989d-4c65-9ca5-882817593fc6
+[2022-01-30, 23:59:44 ] {subprocess.py:93} INFO - Command exited with return code 0
+[2022-01-30, 23:59:44 ] {taskinstance.py:1267} INFO - Marking task as SUCCESS. dag_id=Airflow_cancer, task_id=Spark_queryy, execution_date=20220130T125842, start_date=20220130T125918, end_date=20220130T125944
+[2022-01-30, 23:59:44 ] {local_task_job.py:154} INFO - Task exited with return code 0
+[2022-01-30, 23:59:44 ] {local_task_job.py:264} INFO - 1 downstream tasks scheduled from follow-on schedule check
+

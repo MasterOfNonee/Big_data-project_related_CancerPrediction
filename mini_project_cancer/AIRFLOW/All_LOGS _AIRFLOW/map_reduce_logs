@@ -1,0 +1,109 @@
+*** Reading local file: /home/harsh/airflow/logs/Airflow_cancer/Map_reduce/2022-01-30T10:56:50.891070+00:00/1.log
+[2022-01-30, 21:56:52 ] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: Airflow_cancer.Map_reduce manual__2022-01-30T10:56:50.891070+00:00 [queued]>
+[2022-01-30, 21:56:52 ] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: Airflow_cancer.Map_reduce manual__2022-01-30T10:56:50.891070+00:00 [queued]>
+[2022-01-30, 21:56:52 ] {taskinstance.py:1238} INFO - 
+--------------------------------------------------------------------------------
+[2022-01-30, 21:56:52 ] {taskinstance.py:1239} INFO - Starting attempt 1 of 1
+[2022-01-30, 21:56:52 ] {taskinstance.py:1240} INFO - 
+--------------------------------------------------------------------------------
+[2022-01-30, 21:56:52 ] {taskinstance.py:1259} INFO - Executing <Task(BashOperator): Map_reduce> on 2022-01-30 10:56:50.891070+00:00
+[2022-01-30, 21:56:52 ] {standard_task_runner.py:52} INFO - Started process 72574 to run task
+[2022-01-30, 21:56:52 ] {standard_task_runner.py:76} INFO - Running: ['airflow', 'tasks', 'run', 'Airflow_cancer', 'Map_reduce', 'manual__2022-01-30T10:56:50.891070+00:00', '--job-id', '138', '--raw', '--subdir', 'DAGS_FOLDER/airflow.py', '--cfg-path', '/tmp/tmpagct12g9', '--error-file', '/tmp/tmpd1_f_ld4']
+[2022-01-30, 21:56:52 ] {standard_task_runner.py:77} INFO - Job 138: Subtask Map_reduce
+[2022-01-30, 21:56:52 ] {logging_mixin.py:109} INFO - Running <TaskInstance: Airflow_cancer.Map_reduce manual__2022-01-30T10:56:50.891070+00:00 [running]> on host harsh-virtual-machine
+[2022-01-30, 21:56:52 ] {taskinstance.py:1424} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=HARSH
+AIRFLOW_CTX_DAG_ID=Airflow_cancer
+AIRFLOW_CTX_TASK_ID=Map_reduce
+AIRFLOW_CTX_EXECUTION_DATE=2022-01-30T10:56:50.891070+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-01-30T10:56:50.891070+00:00
+[2022-01-30, 21:56:52 ] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2022-01-30, 21:56:52 ] {subprocess.py:74} INFO - Running command: ['bash', '-c', 'hadoop jar /home/harsh/Downloads/mini_project/Mini_project/target/Mini_project-0.0.1-SNAPSHOT.jar  mapreduce.Mapreduce_job /mini_project/raw/stage/part-00000-3d3b2ea9-d88e-4dea-b974-2d6b512bcd9f-c000.csv /mini_project/raw/stage/dq_goody']
+[2022-01-30, 21:56:52 ] {subprocess.py:85} INFO - Output:
+[2022-01-30, 21:56:53 ] {subprocess.py:89} INFO - 2022-01-30, 21:56:53  INFO client.DefaultNoHARMFailoverProxyProvider: Connecting to ResourceManager at /0.0.0.0:8032
+[2022-01-30, 21:56:54 ] {subprocess.py:89} INFO - 2022-01-30, 21:56:54  WARN mapreduce.JobResourceUploader: Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+[2022-01-30, 21:56:54 ] {subprocess.py:89} INFO - 2022-01-30, 21:56:54  INFO mapreduce.JobResourceUploader: Disabling Erasure Coding for path: /tmp/hadoop-yarn/staging/harsh/.staging/job_1643495154301_0019
+[2022-01-30, 21:56:54 ] {subprocess.py:89} INFO - 2022-01-30, 21:56:54  INFO input.FileInputFormat: Total input files to process : 1
+[2022-01-30, 21:56:54 ] {subprocess.py:89} INFO - 2022-01-30, 21:56:54  INFO mapreduce.JobSubmitter: number of splits:1
+[2022-01-30, 21:56:54 ] {subprocess.py:89} INFO - 2022-01-30, 21:56:54  INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1643495154301_0019
+[2022-01-30, 21:56:54 ] {subprocess.py:89} INFO - 2022-01-30, 21:56:54  INFO mapreduce.JobSubmitter: Executing with tokens: []
+[2022-01-30, 21:56:54 ] {subprocess.py:89} INFO - 2022-01-30, 21:56:54  INFO conf.Configuration: resource-types.xml not found
+[2022-01-30, 21:56:54 ] {subprocess.py:89} INFO - 2022-01-30, 21:56:54  INFO resource.ResourceUtils: Unable to find 'resource-types.xml'.
+[2022-01-30, 21:56:54 ] {subprocess.py:89} INFO - 2022-01-30, 21:56:54  INFO impl.YarnClientImpl: Submitted application application_1643495154301_0019
+[2022-01-30, 21:56:54 ] {subprocess.py:89} INFO - 2022-01-30, 21:56:54  INFO mapreduce.Job: The url to track the job: http://harsh-virtual-machine:8088/proxy/application_1643495154301_0019/
+[2022-01-30, 21:56:54 ] {subprocess.py:89} INFO - 2022-01-30, 21:56:54  INFO mapreduce.Job: Running job: job_1643495154301_0019
+[2022-01-30, 21:56:59 ] {subprocess.py:89} INFO - 2022-01-30, 21:56:59  INFO mapreduce.Job: Job job_1643495154301_0019 running in uber mode : false
+[2022-01-30, 21:56:59 ] {subprocess.py:89} INFO - 2022-01-30, 21:56:59  INFO mapreduce.Job:  map 0% reduce 0%
+[2022-01-30, 21:57:02 ] {subprocess.py:89} INFO - 2022-01-30, 21:57:02  INFO mapreduce.Job:  map 100% reduce 0%
+[2022-01-30, 21:57:06 ] {subprocess.py:89} INFO - 2022-01-30, 21:57:06  INFO mapreduce.Job:  map 100% reduce 100%
+[2022-01-30, 21:57:06 ] {subprocess.py:89} INFO - 2022-01-30, 21:57:06  INFO mapreduce.Job: Job job_1643495154301_0019 completed successfully
+[2022-01-30, 21:57:06 ] {subprocess.py:89} INFO - 2022-01-30, 21:57:06  INFO mapreduce.Job: Counters: 55
+[2022-01-30, 21:57:06 ] {subprocess.py:89} INFO - 	File System Counters
+[2022-01-30, 21:57:06 ] {subprocess.py:89} INFO - 		FILE: Number of bytes read=28366
+[2022-01-30, 21:57:06 ] {subprocess.py:89} INFO - 		FILE: Number of bytes written=602383
+[2022-01-30, 21:57:06 ] {subprocess.py:89} INFO - 		FILE: Number of read operations=0
+[2022-01-30, 21:57:06 ] {subprocess.py:89} INFO - 		FILE: Number of large read operations=0
+[2022-01-30, 21:57:06 ] {subprocess.py:89} INFO - 		FILE: Number of write operations=0
+[2022-01-30, 21:57:06 ] {subprocess.py:89} INFO - 		HDFS: Number of bytes read=24332
+[2022-01-30, 21:57:06 ] {subprocess.py:89} INFO - 		HDFS: Number of bytes written=25564
+[2022-01-30, 21:57:06 ] {subprocess.py:89} INFO - 		HDFS: Number of read operations=8
+[2022-01-30, 21:57:06 ] {subprocess.py:89} INFO - 		HDFS: Number of large read operations=0
+[2022-01-30, 21:57:06 ] {subprocess.py:89} INFO - 		HDFS: Number of write operations=2
+[2022-01-30, 21:57:06 ] {subprocess.py:89} INFO - 		HDFS: Number of bytes read erasure-coded=0
+[2022-01-30, 21:57:06 ] {subprocess.py:89} INFO - 	Job Counters
+[2022-01-30, 21:57:06 ] {subprocess.py:89} INFO - 		Launched map tasks=1
+[2022-01-30, 21:57:06 ] {subprocess.py:89} INFO - 		Launched reduce tasks=1
+[2022-01-30, 21:57:06 ] {subprocess.py:89} INFO - 		Data-local map tasks=1
+[2022-01-30, 21:57:06 ] {subprocess.py:89} INFO - 		Total time spent by all maps in occupied slots (ms)=1598
+[2022-01-30, 21:57:06 ] {subprocess.py:89} INFO - 		Total time spent by all reduces in occupied slots (ms)=1590
+[2022-01-30, 21:57:06 ] {subprocess.py:89} INFO - 		Total time spent by all map tasks (ms)=1598
+[2022-01-30, 21:57:06 ] {subprocess.py:89} INFO - 		Total time spent by all reduce tasks (ms)=1590
+[2022-01-30, 21:57:06 ] {subprocess.py:89} INFO - 		Total vcore-milliseconds taken by all map tasks=1598
+[2022-01-30, 21:57:06 ] {subprocess.py:89} INFO - 		Total vcore-milliseconds taken by all reduce tasks=1590
+[2022-01-30, 21:57:06 ] {subprocess.py:89} INFO - 		Total megabyte-milliseconds taken by all map tasks=1636352
+[2022-01-30, 21:57:06 ] {subprocess.py:89} INFO - 		Total megabyte-milliseconds taken by all reduce tasks=1628160
+[2022-01-30, 21:57:06 ] {subprocess.py:89} INFO - 	Map-Reduce Framework
+[2022-01-30, 21:57:06 ] {subprocess.py:89} INFO - 		Map input records=699
+[2022-01-30, 21:57:06 ] {subprocess.py:89} INFO - 		Map output records=699
+[2022-01-30, 21:57:06 ] {subprocess.py:89} INFO - 		Map output bytes=26962
+[2022-01-30, 21:57:06 ] {subprocess.py:89} INFO - 		Map output materialized bytes=28366
+[2022-01-30, 21:57:06 ] {subprocess.py:89} INFO - 		Input split bytes=166
+[2022-01-30, 21:57:06 ] {subprocess.py:89} INFO - 		Combine input records=0
+[2022-01-30, 21:57:06 ] {subprocess.py:89} INFO - 		Combine output records=0
+[2022-01-30, 21:57:06 ] {subprocess.py:89} INFO - 		Reduce input groups=1
+[2022-01-30, 21:57:06 ] {subprocess.py:89} INFO - 		Reduce shuffle bytes=28366
+[2022-01-30, 21:57:06 ] {subprocess.py:89} INFO - 		Reduce input records=699
+[2022-01-30, 21:57:06 ] {subprocess.py:89} INFO - 		Reduce output records=699
+[2022-01-30, 21:57:06 ] {subprocess.py:89} INFO - 		Spilled Records=1398
+[2022-01-30, 21:57:06 ] {subprocess.py:89} INFO - 		Shuffled Maps =1
+[2022-01-30, 21:57:06 ] {subprocess.py:89} INFO - 		Failed Shuffles=0
+[2022-01-30, 21:57:06 ] {subprocess.py:89} INFO - 		Merged Map outputs=1
+[2022-01-30, 21:57:06 ] {subprocess.py:89} INFO - 		GC time elapsed (ms)=22
+[2022-01-30, 21:57:06 ] {subprocess.py:89} INFO - 		CPU time spent (ms)=900
+[2022-01-30, 21:57:06 ] {subprocess.py:89} INFO - 		Physical memory (bytes) snapshot=505090048
+[2022-01-30, 21:57:06 ] {subprocess.py:89} INFO - 		Virtual memory (bytes) snapshot=5645672448
+[2022-01-30, 21:57:06 ] {subprocess.py:89} INFO - 		Total committed heap usage (bytes)=433061888
+[2022-01-30, 21:57:06 ] {subprocess.py:89} INFO - 		Peak Map Physical memory (bytes)=272920576
+[2022-01-30, 21:57:06 ] {subprocess.py:89} INFO - 		Peak Map Virtual memory (bytes)=2816335872
+[2022-01-30, 21:57:06 ] {subprocess.py:89} INFO - 		Peak Reduce Physical memory (bytes)=232169472
+[2022-01-30, 21:57:06 ] {subprocess.py:89} INFO - 		Peak Reduce Virtual memory (bytes)=2829336576
+[2022-01-30, 21:57:06 ] {subprocess.py:89} INFO - 	Shuffle Errors
+[2022-01-30, 21:57:06 ] {subprocess.py:89} INFO - 		BAD_ID=0
+[2022-01-30, 21:57:06 ] {subprocess.py:89} INFO - 		CONNECTION=0
+[2022-01-30, 21:57:06 ] {subprocess.py:89} INFO - 		IO_ERROR=0
+[2022-01-30, 21:57:06 ] {subprocess.py:89} INFO - 		WRONG_LENGTH=0
+[2022-01-30, 21:57:06 ] {subprocess.py:89} INFO - 		WRONG_MAP=0
+[2022-01-30, 21:57:06 ] {subprocess.py:89} INFO - 		WRONG_REDUCE=0
+[2022-01-30, 21:57:06 ] {subprocess.py:89} INFO - 	mapreduce.Mapreduce_job$GrabageCounters
+[2022-01-30, 21:57:06 ] {subprocess.py:89} INFO - 		count=1
+[2022-01-30, 21:57:06 ] {subprocess.py:89} INFO - 	File Input Format Counters
+[2022-01-30, 21:57:06 ] {subprocess.py:89} INFO - 		Bytes Read=24166
+[2022-01-30, 21:57:06 ] {subprocess.py:89} INFO - 	File Output Format Counters
+[2022-01-30, 21:57:06 ] {subprocess.py:89} INFO - 		Bytes Written=25564
+[2022-01-30, 21:57:06 ] {subprocess.py:89} INFO - no of Garbage values: 1
+[2022-01-30, 21:57:06 ] {subprocess.py:89} INFO - job.isSuccessful true
+[2022-01-30, 21:57:07 ] {subprocess.py:93} INFO - Command exited with return code 0
+[2022-01-30, 21:57:07 ] {taskinstance.py:1267} INFO - Marking task as SUCCESS. dag_id=Airflow_cancer, task_id=Map_reduce, execution_date=20220130T105650, start_date=20220130T105652, end_date=20220130T105707
+[2022-01-30, 21:57:07 ] {local_task_job.py:154} INFO - Task exited with return code 0
+[2022-01-30, 21:57:07 ] {local_task_job.py:264} INFO - 2 downstream tasks scheduled from follow-on schedule check
